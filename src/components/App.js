@@ -10,6 +10,7 @@ import Sports from "./Sports";
 import Entertainment from "./Entertainment";
 import Weather from "./Weather";
 import Science from "./Science";
+import Justin from "./Justin";
 
 function App() {
   return (
@@ -44,6 +45,11 @@ function App() {
           <Route exact path="/science">
             <Science />
           </Route>
+
+          <Route exact path="/justin">
+            <Justin />
+          </Route>
+
         </Switch>
       </Router>
     </div>
