@@ -1,3 +1,3 @@
-#Added readme
+# Added readme
 
-#github.com/mauritzerick/AUNEWS-CLIENT
+## github.com/mauritzerick/AUNEWS-CLIENT
