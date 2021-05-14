@@ -10,6 +10,7 @@ const Navigation2 = () => {
       <Nav.Link href="/sports">SPORTS</Nav.Link>||
       <Nav.Link href="/weather">WEATHER</Nav.Link>||
       <Nav.Link href="/science">SCIENCE</Nav.Link>
+      <Nav.Link href="/crypto">Crypto</Nav.Link>
     </Nav>
   );
 };
