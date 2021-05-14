@@ -1,9 +1,9 @@
-import React from "react";
+import React, { Component } from "react"; // destructuring
 
-class Entertainment extends React.Compomnent {
+class Entertainment extends Component {
   render() {
     return <h1>Entertainment!</h1>;
   }
 }
 
-export default Entertainment;
+export default Entertainment; // remember to export

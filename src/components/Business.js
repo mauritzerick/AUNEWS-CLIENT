@@ -1,9 +1,9 @@
-import React from "react";
+import React, { Component } from "react"; // destructuring
 
-class Business extends React.Compomnent {
+class Business extends Component {
   render() {
     return <h1>Business!</h1>;
   }
 }
 
-export default Business;
+export default Business; // remember to export

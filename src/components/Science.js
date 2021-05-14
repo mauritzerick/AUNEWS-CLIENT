@@ -1,9 +1,9 @@
-import React from "react";
+import React, { Component } from "react"; // destructuring
 
-class Science extends React.Compomnent {
+class Science extends Component {
   render() {
     return <h1>Science!</h1>;
   }
 }
 
-export default Science;
+export default Science; // remember to export

@@ -1,39 +1,51 @@
 import React from "react";
 import Homepage from "./Homepage.js";
 import axios from "axios";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Navigation1 from "./Navigation1";
+import Navigation2 from "./Navigation2";
+import General from "./General";
+import Business from "./Business";
+import Sports from "./Sports";
+import Entertainment from "./Entertainment";
+import Weather from "./Weather";
+import Science from "./Science";
 
 function App() {
   return (
     <div className="Home">
-      <Homepage />
-      <Navigation1 />
-      <Navigation2 />
+      <Router>
+        <Homepage />
 
-      <Switch>
-        <Route exact path="/general">
-          <General />
-        </Route>
+        <Navigation1 />
+        <Navigation2 />
 
-        <Route exact path="/business">
-          <Buniness />
-        </Route>
+        <Switch>
+          <Route exact path="/general">
+            <General />
+          </Route>
 
-        <Route exact path="/sports">
-          <Sports />
-        </Route>
+          <Route exact path="/business">
+            <Business />
+          </Route>
 
-        <Route exact path="/entertainment">
-          <Entertainment />
-        </Route>
+          <Route exact path="/sports">
+            <Sports />
+          </Route>
 
-        <Route exact path="/weather">
-          <Weather />
-        </Route>
+          <Route exact path="/entertainment">
+            <Entertainment />
+          </Route>
 
-        <Route exact path="/science">
-          <Science />
-        </Route>
-      </Switch>
+          <Route exact path="/weather">
+            <Weather />
+          </Route>
+
+          <Route exact path="/science">
+            <Science />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

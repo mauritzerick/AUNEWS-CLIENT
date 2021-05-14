@@ -1,9 +1,9 @@
-import React from "react";
+import React, { Component } from "react"; // destructuring
 
-class Weather extends React.Compomnent {
+class Weather extends Component {
   render() {
     return <h1>Weather!</h1>;
   }
 }
 
-export default Weather;
+export default Weather; // remember to export
