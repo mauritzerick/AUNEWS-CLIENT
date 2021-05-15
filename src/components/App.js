@@ -1,6 +1,6 @@
 import React from "react";
 import Homepage from "./Homepage.js";
-import axios from "axios";
+
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navigation1 from "./Navigation1";
 import Navigation2 from "./Navigation2";
@@ -10,16 +10,19 @@ import Sports from "./Sports";
 import Entertainment from "./Entertainment";
 import Weather from "./Weather";
 import Science from "./Science";
+import Crypto from "./Crypto";
 import Justin from "./Justin";
+
 
 function App() {
   return (
     <div className="Home">
       <Router>
-        <Homepage />
-
         <Navigation1 />
+
         <Navigation2 />
+        
+        <Homepage />
 
         <Switch>
           <Route exact path="/general">
@@ -46,6 +49,10 @@ function App() {
             <Science />
           </Route>
 
+          <Route exact path="/crypto">
+            <Crypto />
+          </Route>
+
           <Route exact path="/justin">
             <Justin />
           </Route>
@@ -53,7 +60,13 @@ function App() {
         </Switch>
       </Router>
     </div>
+
+
+
   );
+
+
+
 }
 
 export default App;
