@@ -9,17 +9,17 @@ class Science extends Component {
   constructor() {
     super()
     this.state ={
-      articles: []
+      scienceNewsArticles: []
     };
   }
 
   componentDidMount() {
     const scienceInfo = () => {
-      const scienceURL = "http://newsapi.org/v2/top-headlines?country=au&category=science&apikey=a598dbb0d4a24ccf8c3a54a403b3e1ce";
-      axios(scienceURL).then((info) => {
+      const scienceNewsURL = "http://newsapi.org/v2/top-headlines?country=au&category=science&apikey=a598dbb0d4a24ccf8c3a54a403b3e1ce";
+      axios(scienceNewsURL).then((info) => {
         console.log(info.data.articles);
         let newsArticles = info.data.articles;
-        this.setState({articles: newsArticles})
+        this.setState({scienceNewsArticles: newsArticles})
       }).catch(error => alert('There is an error'));
     }
     scienceInfo()
@@ -28,7 +28,7 @@ class Science extends Component {
   render() {
     return (
       <div className="mainBlock">
-        {this.state.articles.map((article, index) => (
+        {this.state.scienceNewsArticles.map((article, index) => (
           <NewsCard className="newsCard" key={article.publishedAt}
             title={article.title}
             image={article.urlToImage === null ? altImage : article.urlToImage}
