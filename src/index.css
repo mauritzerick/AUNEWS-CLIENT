@@ -29,6 +29,17 @@ code {
     monospace;
 }
 
+.makeStyles-root-1 {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px
+}
+.mainBlock {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
 *,
 *:before,
 *:after {
