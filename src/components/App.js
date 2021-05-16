@@ -11,17 +11,18 @@ import Entertainment from "./Entertainment";
 import Weather from "./Weather";
 import Science from "./Science";
 import Crypto from "./Crypto";
-
+import Justin from "./Justin";
 
 
 function App() {
   return (
     <div className="Home">
       <Router>
-        <Homepage />
-
         <Navigation1 />
+
         <Navigation2 />
+        
+        <Homepage />
 
         <Switch>
           <Route exact path="/general">
@@ -50,6 +51,10 @@ function App() {
 
           <Route exact path="/crypto">
             <Crypto />
+          </Route>
+
+          <Route exact path="/justin">
+            <Justin />
           </Route>
 
         </Switch>
