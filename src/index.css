@@ -32,9 +32,19 @@ code {
 
 .makeStyles-root-1 {
   display: inline-block;
-  margin: 10px;
-  padding: 10px
+  margin: 6px;
+  padding: 6px;
 }
+
+.MuiTypography-h5{
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.MuiTypography-body2{
+  font-size: 0.650rem;
+}
+
 .mainBlock {
   display: flex;
   flex-wrap: wrap;

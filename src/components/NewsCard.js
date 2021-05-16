@@ -12,11 +12,18 @@ import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 340,
+    maxWidth: 299,
     minHeight: 340,
   },
   media: {
-    height: 140,
+    height: 150,
+  },
+  fontStyle:{
+    fontWeight: 800,
+    fontSize: 14,
+  },
+  bodyFontStyle:{
+    fontSize: 10,
   },
 });
 
@@ -31,10 +38,10 @@ export default function NewsCard(props) {
           image={props.image}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography gutterBottom variant="h5" component="h5" className={classes.fontStyle}>
             {props.title}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography variant="body2" color="textSecondary" component="p" className={classes.bodyFontStyle}>
             {props.description}
           </Typography>
         </CardContent>
