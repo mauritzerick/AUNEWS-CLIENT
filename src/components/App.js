@@ -12,6 +12,7 @@ import Weather from "./Weather";
 import Science from "./Science";
 import Crypto from "./Crypto";
 import Justin from "./Justin";
+import Search from "./Search";
 
 
 function App() {
@@ -21,10 +22,15 @@ function App() {
         <Navigation1 />
 
         <Navigation2 />
-        
+
         <Homepage />
 
         <Switch>
+
+          <Route exact path="/search">
+            <Search />
+          </Route>
+
           <Route exact path="/general">
             <General />
           </Route>
