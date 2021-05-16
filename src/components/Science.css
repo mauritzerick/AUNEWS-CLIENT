@@ -1,0 +1,11 @@
+.article {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  width: 50%;
+}
+
+.title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
