@@ -7,6 +7,7 @@ const Navigation2 = () => {
     <Nav>
       <Nav.Link href="/general">GENERAL</Nav.Link>||
       <Nav.Link href="/business">BUSINESS</Nav.Link>||
+      <Nav.Link href="/entertainment">ENTERTAINMENT</Nav.Link>||
       <Nav.Link href="/sports">SPORTS</Nav.Link>||
       <Nav.Link href="/weather">WEATHER</Nav.Link>||
       <Nav.Link href="/science">SCIENCE</Nav.Link>||
