@@ -9,25 +9,25 @@ class Business extends Component {
   constructor() {
     super()
     this.state ={
-      articles: []
+      businessNewsArticles: []
     };
   }
 
   componentDidMount() {
-    const scienceInfo = () => {
-      const scienceURL = "http://newsapi.org/v2/top-headlines?country=au&category=business&apikey=a598dbb0d4a24ccf8c3a54a403b3e1ce";
-      axios(scienceURL).then((info) => {
+    const businessInfo = () => {
+      const businessNewsURL = "http://newsapi.org/v2/top-headlines?country=au&category=business&apikey=a598dbb0d4a24ccf8c3a54a403b3e1ce";
+      axios(businessNewsURL).then((info) => {
         let newsArticles = info.data.articles;
-        this.setState({articles: newsArticles})
+        this.setState({businessNewsArticles: newsArticles})
       }).catch(error => alert('There is an error'));
     }
-    scienceInfo()
+    businessInfo()
   };
 
   render() {
     return (
       <div className="mainBlock">
-        {this.state.articles.map((article, index) => (
+        {this.state.businessNewsArticles.map((article, index) => (
           <NewsCard className="newsCard" key={article.publishedAt}
             title={article.title}
             image={article.urlToImage === null ? altImage : article.urlToImage}
