@@ -8,6 +8,16 @@
   --orange: #fa8334;
   --red: #ff312e;
 }
+
+.inactive {
+  color: #fff;
+  text-decoration: none;
+}
+
+.active {
+  color: red;
+  text-decoration: none;
+}
 html {
   box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -30,6 +40,10 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.nav1 {
+  text-decoration: none; 
 }
 
 .makeStyles-root-1 {
