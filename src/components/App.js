@@ -13,6 +13,7 @@ import Science from "./Science";
 import Crypto from "./Crypto";
 import Justin from "./Justin";
 import Search from "./Search";
+import Chartpage from "./Chartpage"
 
 
 function App() {
@@ -58,6 +59,15 @@ function App() {
           <Route exact path="/crypto">
             <Crypto />
           </Route>
+
+          <Route exact path="/crypto">
+            <Crypto />
+          </Route>
+
+          <Route exact path="/chartpage">
+            <Chartpage />
+          </Route>
+
 
           <Route exact path="/justin">
             <Justin />
