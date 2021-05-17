@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  background-image: url(./texture.svg);
+  /* background-image: url(./texture.svg); */
   background-color: var(--darkGrey);
   min-height: calc(100vh - 100px);
   margin: 10px;
@@ -35,16 +35,6 @@ code {
   margin: 6px;
   padding: 6px;
 }
-
-.MuiTypography-h5{
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-.MuiTypography-body2{
-  font-size: 0.650rem;
-}
-
 .mainBlock {
   display: flex;
   flex-wrap: wrap;
