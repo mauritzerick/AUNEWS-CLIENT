@@ -15,7 +15,7 @@ class News extends Component {
   componentDidMount() {
     console.log(this.props);
     const newsInfo = () => {
-      const newsURL = `http://newsapi.org/v2/top-headlines?country=au&category=${this.props.match.params.category}&apikey=a598dbb0d4a24ccf8c3a54a403b3e1ce`;
+      const newsURL = `http://newsapi.org/v2/top-headlines?country=au&category=${this.props.match.params.category}&apikey=d2136c3cf54d4638afa776dc6055a159`;
       console.log(newsURL);
       axios(newsURL).then((info) => {
         let newsArticles = info.data.articles;
@@ -35,6 +35,7 @@ class News extends Component {
             description={article.description}
             link={article.url}/>
         ))}
+
       </div>
     );
   }
