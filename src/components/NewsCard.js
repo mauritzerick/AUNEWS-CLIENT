@@ -33,10 +33,15 @@ export default function NewsCard(props) {
   return (
     <Card className={classes.root}>
       <CardActionArea>
+      { props.image ?
         <CardMedia
           className={classes.media}
           image={props.image}
-        />
+        />: null }
+        {
+          props.children
+        }
+        
         <CardContent>
           <Typography gutterBottom variant="h5" component="h5" className={classes.fontStyle}>
             {props.title}

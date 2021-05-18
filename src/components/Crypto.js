@@ -1,15 +1,24 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios'
 import Coins from './Coins';
+import DynamicTable from './DynamicTable';
 
 
 function Crypto() {
   const [coins, setCoins] = useState([])
   const [search, setSearch] = useState('')
   useEffect(() => {
-    axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=aud&order=market_cap_desc&per_page=100&page=1&sparkline=false')
+    axios('https://api.coingecko.com/api/v3/coins/markets?vs_currency=aud&order=market_cap_desc&per_page=100&page=1&sparkline=false')
     .then(res => {
       console.log(res.data);
+      res.data.map((coin, i) => {
+        if(coin['price_change_percentage_24h'] < 0){
+          coin["className"] = "Red";
+        }else{
+          coin["className"] = "Green";
+        }
+      });
+      console.log("after Class name added", res.data);
       setCoins(res.data);
 
     }).catch(error => alert('There is an error'));
@@ -21,7 +30,7 @@ function Crypto() {
 
   const filteredCoins = coins.filter(coin =>
     coin.name.toLowerCase().includes(search.toLowerCase())
-    )
+  )
 
 
   return (
@@ -33,19 +42,7 @@ function Crypto() {
              className="coin-input" onChange={handleChange}/>
           </form>
       </div>
-      {filteredCoins.map(coin => {
-        return <Coins 
-        key={coin.id} 
-        name={coin.name} 
-        image={coin.image}
-        symbol={coin.symbol}
-        marketcap={coin.market_cap}
-        price={coin.current_price}
-        priceChange={coin.price_change_percentage_24h}
-        volume={coin.total_volume}
-        />;
-        
-      })}
+      <DynamicTable coins={filteredCoins} />
     </div>
   );
 }

@@ -1,0 +1,21 @@
+.home {
+  margin: 0 5px;
+}
+.homeDiv {
+  display: flex;
+}
+.div1{
+  width: 76%;
+}
+.div2 {
+  width: 23%;
+  display: inline-block;
+}
+.div3 {
+  width: 100%;
+  display: block;
+}
+.div4 {
+  width: 100%;
+  display: block;
+}
