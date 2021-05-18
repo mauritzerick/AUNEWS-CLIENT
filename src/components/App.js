@@ -16,8 +16,6 @@ import { WatchListContextProvider } from "../chart/context/watchListContext";
 import Justin from "./Justin";
 import Search from "./Search";
 
-import News from "./News"
-
 
 import News from "./News"
 
