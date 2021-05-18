@@ -3,13 +3,24 @@ import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 
 const Navigation1 = () => {
-  
   return (
     <Container>
       <Nav>
-        <Nav.Link href="/" className="inactive" activeClassName="active" >ABC NEWS</Nav.Link>||
-        <Nav.Link href="/weather" className="inactive" activeClassName="active" >WEATHER</Nav.Link>||
-        <Nav.Link href="/search" className="inactive" activeClassName="active" >Search</Nav.Link>
+        <Nav.Link href="/" className="inactive" activeClassName="active">
+          ABC NEWS
+        </Nav.Link>
+        ||
+        <Nav.Link
+          href="/localweather"
+          className="inactive"
+          activeClassName="active"
+        >
+          LOCAL WEATHER
+        </Nav.Link>
+        ||
+        <Nav.Link href="/search" className="inactive" activeClassName="active">
+          Search
+        </Nav.Link>
       </Nav>
     </Container>
   );

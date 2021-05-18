@@ -42,6 +42,10 @@ function App() {
             <Weather />
           </Route>
 
+          <Route exact path="/localweather">
+            <Weathernav />
+          </Route>
+
           <Route exact path="/crypto">
             <Crypto />
           </Route>
