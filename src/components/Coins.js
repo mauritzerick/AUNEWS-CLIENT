@@ -1,5 +1,5 @@
-import React from 'react'
-import './Coin.css';
+import React from "react";
+import "./Coin.css";
 
 const Coins = ({ name, image, symbol, price, volume, priceChange, marketcap}) => {
     return (
@@ -34,3 +34,4 @@ const Coins = ({ name, image, symbol, price, volume, priceChange, marketcap}) =>
 
 export default Coins
 
+export default Coin;

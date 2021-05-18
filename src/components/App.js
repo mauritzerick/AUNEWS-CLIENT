@@ -10,14 +10,14 @@ import Crypto from "./Crypto";
 import "../chart/chart.css";
 // import Apps from "../chart/Apps"
 // import Header from "../chart/comps/Header"
-import CoinSummaryPage from "../chart/pages/CoinSummaryPage"
-import CoinDetailPage from "../chart/pages/CoinDetailPage"
+import CoinSummaryPage from "../chart/pages/CoinSummaryPage";
+import CoinDetailPage from "../chart/pages/CoinDetailPage";
 import { WatchListContextProvider } from "../chart/context/watchListContext";
 import Justin from "./Justin";
 import Search from "./Search";
+import Weathernav from "./Weathernav";
 
-import News from "./News"
-
+import News from "./News";
 
 function App() {
   return (
@@ -27,14 +27,12 @@ function App() {
 
         <Navigation2 />
 
-
-
         <Switch>
           <Route exact path="/">
             <Homepage />
           </Route>
 
-          <Route exact path="/news/:category" component={News}/>
+          <Route exact path="/news/:category" component={News} />
 
           <Route exact path="/search">
             <Search />
