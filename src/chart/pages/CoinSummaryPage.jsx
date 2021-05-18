@@ -1,6 +1,7 @@
 import React from "react";
-import AddCoin from "../components/AddCoin";
-import CoinList from "../components/CoinList";
+// import "../chart.css";
+import AddCoin from "../comps/AddCoin";
+import CoinList from "../comps/CoinList";
 
 const CoinSummaryPage = () => {
   return (

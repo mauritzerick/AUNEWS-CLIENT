@@ -5,16 +5,16 @@ const AddCoin = () => {
   const [isActive, setIsActive] = useState(false);
   const { addCoin } = useContext(WatchListContext);
   const availableCoins = [
-    "bitcoin",
-    "ethereum",
-    "ripple",
-    "tether",
-    "bitcoin-cash",
-    "litecoin",
-    "eos",
-    "okb",
-    "tezos",
-    "cardano",
+    "Bitcoin",
+    "Ethereum",
+    "Ripple",
+    "Tether",
+    "Bitcoin-cash",
+    "Litecoin",
+    "Eos",
+    "Okb",
+    "Tezos",
+    "Cardano",
   ];
 
   const handleClick = (coin) => {

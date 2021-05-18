@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios'
-import Coin from './Coin';
+import Coins from './Coins';
 
 
 function Crypto() {
@@ -33,7 +33,7 @@ function Crypto() {
           </form>
       </div>
       {filteredCoins.map(coin => {
-        return <Coin 
+        return <Coins 
         key={coin.id} 
         name={coin.name} 
         image={coin.image}
