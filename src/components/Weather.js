@@ -48,8 +48,8 @@ function Weather() {
 
   const getData = async () => {
     try {
-      // const data = await getWeatherDataCN(input + ",");
-      const data = await getWeatherDataPC(parseInt(input));
+       const data = await getWeatherDataCN(input + ",");
+      //const data = await getWeatherDataPC(parseInt(input));
       console.log(data);
       setWeatherData(data);
     } catch (error) {
