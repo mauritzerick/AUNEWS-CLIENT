@@ -19,6 +19,7 @@ import Search from "./Search";
 import News from "./News"
 
 
+import News from "./News"
 
 function App() {
   return (

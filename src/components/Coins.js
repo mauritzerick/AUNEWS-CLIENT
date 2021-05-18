@@ -3,6 +3,10 @@ import './Coin.css';
 
 const Coins = ({ name, image, symbol, price, volume, priceChange, marketcap}) => {
     return (
+
+
+
+
         <div className='coin-container'>
             <div className="coin-row">
                 <div className="coin">
@@ -23,7 +27,7 @@ const Coins = ({ name, image, symbol, price, volume, priceChange, marketcap}) =>
                     </p>
                 </div>
             </div>
-            
+
         </div>
     )
 }

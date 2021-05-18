@@ -9,6 +9,7 @@ function Crypto() {
   useEffect(() => {
     axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=aud&order=market_cap_desc&per_page=100&page=1&sparkline=false')
     .then(res => {
+      console.log(res.data);
       setCoins(res.data);
 
     }).catch(error => alert('There is an error'));
@@ -18,7 +19,7 @@ function Crypto() {
     setSearch(e.target.value)
   }
 
-  const filteredCoins = coins.filter(coin => 
+  const filteredCoins = coins.filter(coin =>
     coin.name.toLowerCase().includes(search.toLowerCase())
     )
 
@@ -50,5 +51,3 @@ function Crypto() {
 }
 
 export default Crypto;
-
-
