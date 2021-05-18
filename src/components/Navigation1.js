@@ -6,19 +6,19 @@ const Navigation1 = () => {
   return (
     <Container>
       <Nav>
-        <Nav.Link href="/" className="inactive" activeClassName="active">
+        <Nav.Link href="/" className="inactive" activeclassname="active">
           ABC NEWS
         </Nav.Link>
         ||
         <Nav.Link
           href="/localweather"
           className="inactive"
-          activeClassName="active"
+          activeclassname="active"
         >
           LOCAL WEATHER
         </Nav.Link>
         ||
-        <Nav.Link href="/search" className="inactive" activeClassName="active">
+        <Nav.Link href="/search" className="inactive" activeclassname="active">
           Search
         </Nav.Link>
       </Nav>
