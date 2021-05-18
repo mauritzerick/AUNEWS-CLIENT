@@ -63,7 +63,7 @@ const useStyles = makeStyles({
 export default function DynamicTable(props) {
 
   const rows = [];
-
+  console.log("Props in DynamicTable:", props);
   for (let i = 0; i < props.coins.length; i += 1) {
     rows.push(props.coins[i]);
   }

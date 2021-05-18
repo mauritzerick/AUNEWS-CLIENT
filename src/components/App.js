@@ -48,22 +48,18 @@ function App() {
             <Crypto />
           </Route>
 
-          {/* <Route exact path="/chart">
-            <Apps />
-          </Route> */}
-
-          <WatchListContextProvider>
-
-            {/* <Header /> */}
-            <Route exact path="/chart" component={CoinSummaryPage} />
-            <Route path="/coins/:id" component={CoinDetailPage} />
-
-          </WatchListContextProvider>
-
-
           <Route exact path="/justin">
             <Justin />
           </Route>
+
+
+          <WatchListContextProvider>
+            <Route exact path="/chart" component={CoinSummaryPage} />
+            <Route path="/coins/:id" component={CoinDetailPage} />
+          </WatchListContextProvider>
+
+
+
 
         </Switch>
       </Router>
