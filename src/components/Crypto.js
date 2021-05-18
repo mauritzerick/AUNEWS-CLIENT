@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios'
-import Coin from './Coin';
-import DynamicTable from './DynamicTable';
+import Coins from './Coins';
+
 
 function Crypto() {
   const [coins, setCoins] = useState([])
@@ -41,7 +41,19 @@ function Crypto() {
              className="coin-input" onChange={handleChange}/>
           </form>
       </div>
-      <DynamicTable coins={filteredCoins}/>
+      {filteredCoins.map(coin => {
+        return <Coins 
+        key={coin.id} 
+        name={coin.name} 
+        image={coin.image}
+        symbol={coin.symbol}
+        marketcap={coin.market_cap}
+        price={coin.current_price}
+        priceChange={coin.price_change_percentage_24h}
+        volume={coin.total_volume}
+        />;
+        
+      })}
     </div>
   );
 }

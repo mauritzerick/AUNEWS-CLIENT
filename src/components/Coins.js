@@ -1,7 +1,7 @@
 import React from 'react'
 import './Coin.css';
 
-const Coin = ({ name, image, symbol, price, volume, priceChange, marketcap}) => {
+const Coins = ({ name, image, symbol, price, volume, priceChange, marketcap}) => {
     return (
 
 
@@ -32,4 +32,5 @@ const Coin = ({ name, image, symbol, price, volume, priceChange, marketcap}) => 
     )
 }
 
-export default Coin
+export default Coins
+

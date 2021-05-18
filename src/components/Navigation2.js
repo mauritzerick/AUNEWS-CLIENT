@@ -13,6 +13,7 @@ const Navigation2 = () => {
       <Nav.Link href="/weather" className="inactive" activeClassName="active">WEATHER</Nav.Link>||
       <Nav.Link href="/news/science" className="inactive" activeClassName="active">SCIENCE</Nav.Link>||
       <Nav.Link href="/crypto" className="inactive" activeClassName="active">Crypto</Nav.Link>||
+      <Nav.Link href="/chart" className="inactive" activeClassName="active">Charts</Nav.Link>||
       <Nav.Link href="/justin" className="inactive" activeClassName="active">JUSTIN</Nav.Link>
 
     </Nav>
