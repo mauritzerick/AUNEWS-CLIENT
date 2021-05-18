@@ -9,11 +9,10 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.1",
-<<<<<<< HEAD
+
     "cloudinary-react": "^1.7.0",
-=======
+
     "chart.js": "^2.9.3",
->>>>>>> 6c3834295e611f18100cf490c8dd20bb459b96ef
     "dotenv": "^8.2.0",
     "mailchimp-api-v3": "^1.15.0",
     "newsapi": "^2.4.1",
