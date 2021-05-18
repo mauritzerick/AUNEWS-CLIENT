@@ -2,6 +2,7 @@ import React, { Component } from "react"; // destructuring
 import Crypto from './Crypto';
 import News from './News';
 import './Homepage.css';
+
 class Homepage extends Component {
   render() {
     return(

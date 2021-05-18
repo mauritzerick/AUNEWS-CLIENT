@@ -19,8 +19,6 @@ import Search from "./Search";
 import News from "./News"
 
 
-import News from "./News"
-
 function App() {
   return (
     <div className="Home">
@@ -55,11 +53,11 @@ function App() {
           </Route> */}
 
           <WatchListContextProvider>
-            
+
             {/* <Header /> */}
             <Route exact path="/chart" component={CoinSummaryPage} />
             <Route path="/coins/:id" component={CoinDetailPage} />
-           
+
           </WatchListContextProvider>
 
 
