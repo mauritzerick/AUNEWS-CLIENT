@@ -10,6 +10,14 @@ function Crypto() {
     axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=aud&order=market_cap_desc&per_page=100&page=1&sparkline=false')
     .then(res => {
       console.log(res.data);
+      res.data.map((coin, i) => {
+        if(coin['price_change_percentage_24h'] < 0){
+          coin["className"] = "Red";
+        }else{
+          coin["className"] = "Green";
+        }
+      });
+      console.log("after Class name added", res.data);
       setCoins(res.data);
 
     }).catch(error => alert('There is an error'));

@@ -8,35 +8,35 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
-
+import './DynamicTable.css';
 const columns = [
   {
     id: 'name',
-    label: 'name',
+    label: 'Name',
     minWidth: 15,
     align: 'right'
   },
   {
     id: 'current_price',
-    label: 'current_price',
+    label: 'Current Price',
     minWidth: 15,
     align: 'right'
   },
   {
     id: 'market_cap_rank',
-    label: 'market_cap_rank',
+    label: 'Rank',
     minWidth: 15,
     align: 'right'
   },
   {
     id: 'price_change_percentage_24h',
-    label: 'price_change_percentage_24h',
+    label: 'Spike',
     minWidth: 15,
     align: 'right'
   },
   {
     id: 'last_updated',
-    label: 'last_updated',
+    label: 'last updated',
     minWidth: 15,
     align: 'right'
   }
@@ -44,13 +44,20 @@ const columns = [
 ];
 const useStyles = makeStyles({
   root: {
-    width: 500,
+    width: "100%",
   },
   container: {
     maxHeight: 440,
   },
-  header: {
-    fontWeight: 500,
+  header1: {
+    fontWeight: 900,
+    color: 'red',
+  },
+  Green: {
+    color: 'Green',
+  },
+  Red: {
+    color: 'Red',
   },
 });
 export default function DynamicTable(props) {
@@ -61,11 +68,9 @@ export default function DynamicTable(props) {
     rows.push(props.coins[i]);
   }
 
-
-
   const classes = useStyles();
   const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(10);
+  const [rowsPerPage, setRowsPerPage] = React.useState(5);
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -80,14 +85,14 @@ export default function DynamicTable(props) {
     <Paper className={classes.root}>
       <TableContainer className={classes.container}>
         <Table stickyHeader aria-label="sticky table">
-          <TableHead className={classes.header}>
+          <TableHead>
             <TableRow>
               {columns.map((column) => (
                 <TableCell
                   key={column.id}
                   align={column.align}
                   style={{ minWidth: column.minWidth }}
-                >
+                  className={classes.header1} >
                   {column.label}
                 </TableCell>
               ))}
@@ -99,10 +104,12 @@ export default function DynamicTable(props) {
                 <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
                   {columns.map((column) => {
                     const value = row[column.id];
+                    const classname = row['className'];
                     return (
-                      <TableCell key={column.id} align={column.align}>
+                      <TableCell classname={classes.Green} key={column.id} align={column.align}>
                         {column.format && typeof value === 'number' ? column.format(value) : value}
                       </TableCell>
+
                     );
                   })}
                 </TableRow>

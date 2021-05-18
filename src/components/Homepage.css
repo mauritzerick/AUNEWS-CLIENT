@@ -1,0 +1,26 @@
+.home {
+  background-color: white;
+  margin: 0 170px;
+}
+.homeDiv {
+  
+  display: flex;
+  background-color: white;
+}
+.div1{
+  width: 60%;
+  display: inline-block;
+
+}
+.div2 {
+  width: 38%;
+  display: inline-block;
+}
+.div3 {
+  width: 100%;
+  display: block;
+}
+.div4 {
+  width: 100%;
+  display: block;
+}

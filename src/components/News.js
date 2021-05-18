@@ -15,7 +15,13 @@ class News extends Component {
   componentDidMount() {
     console.log(this.props);
     const newsInfo = () => {
-      const newsURL = `http://newsapi.org/v2/top-headlines?country=au&category=${this.props.match.params.category}&apikey=d2136c3cf54d4638afa776dc6055a159`;
+      let newsURL = "http://newsapi.org/v2/top-headlines?country=au&category="
+      if(this.props.props !== "General" ){
+        newsURL = newsURL + `${this.props.match.params.category}&apikey=d2136c3cf54d4638afa776dc6055a159`;
+      }else{
+        newsURL = newsURL + `${this.props.props}&apikey=d2136c3cf54d4638afa776dc6055a159`;
+      }
+
       console.log(newsURL);
       axios(newsURL).then((info) => {
         let newsArticles = info.data.articles;

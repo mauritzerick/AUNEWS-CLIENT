@@ -18,9 +18,13 @@ function App() {
 
         <Navigation2 />
 
-        <Homepage />
+
 
         <Switch>
+          <Route exact path="/">
+            <Homepage />
+          </Route>
+
           <Route exact path="/news/:category" component={News}/>
 
           <Route exact path="/search">
