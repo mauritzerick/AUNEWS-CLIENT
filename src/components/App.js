@@ -6,9 +6,18 @@ import Navigation1 from "./Navigation1";
 import Navigation2 from "./Navigation2";
 import Weather from "./Weather";
 import Crypto from "./Crypto";
+
+import "../chart/chart.css";
+// import Apps from "../chart/Apps"
+// import Header from "../chart/comps/Header"
+import CoinSummaryPage from "../chart/pages/CoinSummaryPage";
+import CoinDetailPage from "../chart/pages/CoinDetailPage";
+import { WatchListContextProvider } from "../chart/context/watchListContext";
 import Justin from "./Justin";
 import Search from "./Search";
-import News from "./News"
+import Weathernav from "./Weathernav";
+
+import News from "./News";
 
 function App() {
   return (
@@ -18,10 +27,12 @@ function App() {
 
         <Navigation2 />
 
-        <Homepage />
-
         <Switch>
-          <Route exact path="/news/:category" component={News}/>
+          <Route exact path="/">
+            <Homepage />
+          </Route>
+
+          <Route exact path="/news/:category" component={News} />
 
           <Route exact path="/search">
             <Search />
@@ -31,6 +42,10 @@ function App() {
             <Weather />
           </Route>
 
+          <Route exact path="/localweather">
+            <Weathernav />
+          </Route>
+
           <Route exact path="/crypto">
             <Crypto />
           </Route>
@@ -38,6 +53,15 @@ function App() {
           <Route exact path="/justin">
             <Justin />
           </Route>
+
+
+          <WatchListContextProvider>
+            <Route exact path="/chart" component={CoinSummaryPage} />
+            <Route path="/coins/:id" component={CoinDetailPage} />
+          </WatchListContextProvider>
+
+
+
 
         </Switch>
       </Router>

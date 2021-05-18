@@ -14,14 +14,14 @@
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.15em;
-  
+
   display: inline-block;
   padding: 15px 20px;
   position: relative;
-  
+
 }
 
-.inactive::after {    
+.inactive::after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
@@ -33,9 +33,9 @@
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
-.inactive:hover:after { 
-  width: 100%; 
-  left: 0; 
+.inactive:hover:after {
+  width: 100%;
+  left: 0;
 }
 @media screen and (max-height: 300px) {
 	ul {
@@ -61,7 +61,7 @@ html {
 }
 
 body {
-  background-image: url(./texture.svg);
+  /* background-image: url(./texture.svg); */
   background-color: var(--darkGrey);
   min-height: calc(100vh - 100px);
   margin: 10px;
@@ -73,7 +73,7 @@ code {
 }
 
 .nav1 {
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 .makeStyles-root-1 {
@@ -81,21 +81,15 @@ code {
   margin: 6px;
   padding: 6px;
 }
-
-.MuiTypography-h5{
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-.MuiTypography-body2{
-  font-size: 0.650rem;
-}
-
 .mainBlock {
   display: flex;
   flex-wrap: wrap;
 }
-
+.MuiTableCell-head {
+    color: rgba(150, 0, 0, 0.87);
+    font-weight: 700;
+    line-height: 1.0rem;
+}
 
 *,
 *:before,

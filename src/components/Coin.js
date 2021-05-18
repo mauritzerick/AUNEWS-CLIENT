@@ -3,6 +3,10 @@ import './Coin.css';
 
 const Coin = ({ name, image, symbol, price, volume, priceChange, marketcap}) => {
     return (
+
+
+
+
         <div className='coin-container'>
             <div className="coin-row">
                 <div className="coin">
@@ -23,10 +27,9 @@ const Coin = ({ name, image, symbol, price, volume, priceChange, marketcap}) => 
                     </p>
                 </div>
             </div>
-            
+
         </div>
     )
 }
 
-export default Coin
-
+export default Coin;
