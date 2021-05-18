@@ -46,7 +46,8 @@ class News extends Component {
             title={article.title}
             image={article.urlToImage === null ? altImage : article.urlToImage}
             description={article.description}
-            link={article.url}/>
+            link={article.url}>
+          </NewsCard>
         ))}
 
       </div>
