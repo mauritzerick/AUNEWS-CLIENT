@@ -7,7 +7,7 @@ const Navigation1 = () => {
     <Container>
       <Nav>
         <Nav.Link href="/">ABC NEWS</Nav.Link>||
-        <Nav.Link href="/weather">WEATHER</Nav.Link>||
+        <Nav.Link href="/weathernav">local weather</Nav.Link>||
         <Nav.Link href="/search">Search</Nav.Link>
       </Nav>
     </Container>

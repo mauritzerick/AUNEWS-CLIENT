@@ -13,7 +13,9 @@ import Science from "./Science";
 import Crypto from "./Crypto";
 import Justin from "./Justin";
 import Search from "./Search";
+import Weathernav from "./Weathernav";
 
+import { prettyDOM } from "@testing-library/dom";
 
 function App() {
   return (
@@ -26,7 +28,6 @@ function App() {
         <Homepage />
 
         <Switch>
-
           <Route exact path="/search">
             <Search />
           </Route>
@@ -47,6 +48,10 @@ function App() {
             <Entertainment />
           </Route>
 
+          <Route exact path="/weathernav">
+            <Weathernav />
+          </Route>
+
           <Route exact path="/weather">
             <Weather />
           </Route>
@@ -62,17 +67,10 @@ function App() {
           <Route exact path="/justin">
             <Justin />
           </Route>
-
         </Switch>
       </Router>
     </div>
-
-
-
   );
-
-
-
 }
 
 export default App;
