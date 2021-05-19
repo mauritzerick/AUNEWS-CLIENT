@@ -18,7 +18,7 @@ import { WatchListContextProvider } from "../chart/context/watchListContext";
 import Justin from "./Justin";
 import Search from "./Search";
 import Weathernav from "./Weathernav";
-import Footer from "./Footer";
+import Footer from "./footer";
 import News from "./News";
 
 function App() {
