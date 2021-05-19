@@ -7,6 +7,7 @@ import CoinSummaryPage from "../../chart/pages/CoinSummaryPage";
 import CoinDetailPage from "../../chart/pages/CoinDetailPage";
 import { WatchListContextProvider } from "../../chart/context/watchListContext";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 
 function Crypto(props) {
   const [coins, setCoins] = useState([]);
@@ -63,6 +64,7 @@ function Crypto(props) {
         </Router>
         </div>) :
         (<div>
+          <h1> Crypto Currency </h1>
           <CryptoMiniTable coins={filteredCoins}/>
         </div>
       ))

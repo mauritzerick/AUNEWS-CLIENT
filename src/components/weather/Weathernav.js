@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import './Weathernav.css';
+import "./Weathernav.css";
 const baseUrl = "https://api.openweathermap.org/data/2.5";
 const apiKey = "d3e238ced3e15356c1c6acb557b2bc2f";
 
@@ -11,7 +11,7 @@ function Weathernav() {
   useEffect(() => {
     const fetchData = async () => {
       console.log("lat and long values: ", lat, long);
-      if(lat.length != 0 && long.length != 0){
+      if (lat.length != 0 && long.length != 0) {
         await fetch(
           `${baseUrl}/weather/?lat=${lat}&lon=${long}&units=metric&APPID=${apiKey}`
         ).then((res) => res.json())
@@ -35,7 +35,8 @@ function Weathernav() {
       {typeof weatherdata.main != "undefined" ? (
         <div class="weatherData">
           <div class="weatherImage">
-            <img class="weatherImageIcon"
+            <img
+              class="weatherImageIcon"
               src={`http://openweathermap.org/img/w/${weatherdata.weather[0].icon}.png`}
               alt="imgicon"
             />
@@ -49,14 +50,13 @@ function Weathernav() {
           </div>
         </div>
       ) : (
-        <div></div>
+        <div>Loading...</div>
       )}
     </div>
   );
 }
 
 export default Weathernav;
-
 
 // <div>
 //   <h4>Local Weather</h4>
