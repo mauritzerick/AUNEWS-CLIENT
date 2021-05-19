@@ -13,9 +13,9 @@ function Crypto() {
       console.log(res.data);
       res.data.map((coin, i) => {
         if(coin['price_change_percentage_24h'] < 0){
-          coin["className"] = "Red";
+          coin["className"] = "red";
         }else{
-          coin["className"] = "Green";
+          coin["className"] = "green";
         }
       });
       console.log("after Class name added", res.data);

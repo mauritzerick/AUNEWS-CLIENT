@@ -53,13 +53,14 @@ const useStyles = makeStyles({
     fontWeight: 900,
     color: 'red',
   },
-  Green: {
-    color: 'Green',
+  green: {
+    color: 'green',
   },
   Red: {
     color: 'Red',
   },
 });
+
 export default function DynamicTable(props) {
 
   const rows = [];
@@ -80,6 +81,7 @@ export default function DynamicTable(props) {
     setRowsPerPage(+event.target.value);
     setPage(0);
   };
+
 
   return (
     <Paper className={classes.root}>
@@ -104,9 +106,10 @@ export default function DynamicTable(props) {
                 <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
                   {columns.map((column) => {
                     const value = row[column.id];
-                    const classname = row['className'];
+                    const cellName = row['className'];
+                    console.log(cellName);
                     return (
-                      <TableCell classname={classes.Green} key={column.id} align={column.align}>
+                      <TableCell style={{ color: cellName }} key={column.id} align={column.align}>
                         {column.format && typeof value === 'number' ? column.format(value) : value}
                       </TableCell>
 

@@ -6,7 +6,7 @@ const apiKey = "d3e238ced3e15356c1c6acb557b2bc2f";
 function Weathernav() {
   const [lat, setLat] = useState('');
   const [long, setLong] = useState('');
-  const [weatherdata, setData] = useState([]);
+  const [weatherdata, setWeatherData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -16,7 +16,7 @@ function Weathernav() {
           `${baseUrl}/weather/?lat=${lat}&lon=${long}&units=metric&APPID=${apiKey}`
         ).then((res) => res.json())
          .then((result) => {
-            setData(result);
+            setWeatherData(result);
             console.log(result);
           });
       } else {
