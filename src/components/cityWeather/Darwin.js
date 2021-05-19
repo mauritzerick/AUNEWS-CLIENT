@@ -17,7 +17,7 @@ const Darwin = () => {
         lang="en"
         locationLabel="Darwin"
         unitsLabels={{ temperature: "°C", windSpeed: "Km/h" }}
-        showForecast={false}
+        showForecast
       />
     </div>
   );
