@@ -76,14 +76,15 @@ code {
   text-decoration: none;
 }
 
-.makeStyles-root-1 {
+.makeStyles-root-1,.makeStyles-root-6,.makeStyles-root-4,.makeStyles-root-9 {
   display: inline-block;
-  margin: 6px;
-  padding: 6px;
+  margin: 5px;
+  padding: 5px;
 }
 .mainBlock {
   display: flex;
   flex-wrap: wrap;
+  padding-top: 50px;
 }
 .MuiTableCell-head {
     color: rgba(150, 0, 0, 0.87);

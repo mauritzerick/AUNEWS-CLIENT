@@ -20,7 +20,7 @@ const Coins = ({
         </div>
       </div>
     </div>
-  );
-};
+    )
+}
 
 export default Coins;

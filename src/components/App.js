@@ -16,7 +16,7 @@ import { WatchListContextProvider } from "../chart/context/watchListContext";
 import Justin from "./Justin";
 import Search from "./Search";
 import Weathernav from "./Weathernav";
-
+import Footer from "./Footer";
 import News from "./News";
 
 function App() {
@@ -24,7 +24,6 @@ function App() {
     <div className="Home">
       <Router>
         <Navigation1 />
-
         <Navigation2 />
 
         <Switch>
@@ -35,6 +34,7 @@ function App() {
           <Route exact path="/news/:category" component={News} />
 
           <Route exact path="/search">
+
             <Search />
           </Route>
 
@@ -60,10 +60,9 @@ function App() {
             <Route path="/coins/:id" component={CoinDetailPage} />
           </WatchListContextProvider>
 
-
-
-
         </Switch>
+
+        <Footer />
       </Router>
     </div>
   );
