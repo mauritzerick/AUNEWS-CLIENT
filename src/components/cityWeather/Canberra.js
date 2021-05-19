@@ -17,7 +17,7 @@ const Canberra = () => {
         lang="en"
         locationLabel="Canberra"
         unitsLabels={{ temperature: "°C", windSpeed: "Km/h" }}
-        showForecast={false}
+        showForecast
       />
     </div>
   );

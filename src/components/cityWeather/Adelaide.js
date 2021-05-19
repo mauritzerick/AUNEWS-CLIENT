@@ -17,7 +17,7 @@ const Adelaide = () => {
         lang="en"
         locationLabel="Adelaide"
         unitsLabels={{ temperature: "°C", windSpeed: "Km/h" }}
-        showForecast={false}
+        showForecast
       />
     </div>
   );

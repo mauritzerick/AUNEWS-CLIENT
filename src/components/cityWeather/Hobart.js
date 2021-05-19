@@ -17,7 +17,7 @@ const Hobart = () => {
         lang="en"
         locationLabel="Hobart"
         unitsLabels={{ temperature: "°C", windSpeed: "Km/h" }}
-        showForecast={false}
+        showForecast
       />
     </div>
   );

@@ -1,12 +1,11 @@
-import React, {useState, useEffect} from 'react';
-import axios from 'axios'
-import Coins from './Coins';
-import DynamicTable from './DynamicTable';
-
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+// import Coins from './Coins';
+import DynamicTable from "./DynamicTable";
 
 function Crypto() {
-  const [coins, setCoins] = useState([])
-  const [search, setSearch] = useState('')
+  const [coins, setCoins] = useState([]);
+  const [search, setSearch] = useState("");
   useEffect(() => {
     axios('https://api.coingecko.com/api/v3/coins/markets?vs_currency=aud&order=market_cap_desc&per_page=100&page=1&sparkline=false')
     .then(res => {
@@ -24,23 +23,26 @@ function Crypto() {
     }).catch(error => alert('There is an error'));
   }, []);
 
-  const handleChange = e => {
-    setSearch(e.target.value)
-  }
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+  };
 
-  const filteredCoins = coins.filter(coin =>
+  const filteredCoins = coins.filter((coin) =>
     coin.name.toLowerCase().includes(search.toLowerCase())
-  )
-
+  );
 
   return (
-    <div className='coin-app'>
+    <div className="coin-app">
       <div className="coin-search">
         <h1 className="coin-text">To the Moon 🚀</h1>
-          <form>
-            <input type="text" placeholder="Search"
-             className="coin-input" onChange={handleChange}/>
-          </form>
+        <form>
+          <input
+            type="text"
+            placeholder="Search"
+            className="coin-input"
+            onChange={handleChange}
+          />
+        </form>
       </div>
       <DynamicTable coins={filteredCoins} />
     </div>
