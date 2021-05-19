@@ -6,7 +6,7 @@ const Footer = () => {
       <Container>
         <Row>
           <Column>
-          
+
           </Column>
           <Column>
             <Heading>Sections</Heading>
