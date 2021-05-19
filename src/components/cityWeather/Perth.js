@@ -17,7 +17,7 @@ const Perth = () => {
         lang="en"
         locationLabel="Perth"
         unitsLabels={{ temperature: "°C", windSpeed: "Km/h" }}
-        showForecast={false}
+        showForecast
       />
     </div>
   );

@@ -9,6 +9,10 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.1",
+<<<<<<< HEAD
+=======
+    "bootstrap": "^4.6.0",
+>>>>>>> 870fc6922e68df8eb0b8de7c04be0cb0ab118bdd
     "chart.js": "^2.9.3",
     "cloudinary-react": "^1.7.0",
     "dotenv": "^8.2.0",
@@ -23,6 +27,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-table": "^7.7.0",
+    "styled-components": "^5.3.0",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

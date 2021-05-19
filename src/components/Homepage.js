@@ -1,11 +1,11 @@
 import React, { Component } from "react"; // destructuring
-import Crypto from './Crypto';
-import News from './News';
-import './Homepage.css';
+import Crypto from "./Crypto";
+import News from "./News";
+import "./Homepage.css";
 
 class Homepage extends Component {
   render() {
-    return(
+    return (
       <div class="home">
         <div class="homeDiv">
           <div class="div1" >
@@ -16,10 +16,7 @@ class Homepage extends Component {
           </div>
         </div>
       </div>
-
-
-    )
-
+    );
   }
 }
 

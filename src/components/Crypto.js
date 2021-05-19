@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, {useState, useEffect} from 'react';
 import axios from 'axios'
 import Coins from './Coins';
@@ -10,19 +11,25 @@ import { WatchListContextProvider } from "../chart/context/watchListContext";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+=======
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+// import Coins from './Coins';
+import DynamicTable from "./DynamicTable";
+>>>>>>> 870fc6922e68df8eb0b8de7c04be0cb0ab118bdd
 
 function Crypto() {
-  const [coins, setCoins] = useState([])
-  const [search, setSearch] = useState('')
+  const [coins, setCoins] = useState([]);
+  const [search, setSearch] = useState("");
   useEffect(() => {
     axios('https://api.coingecko.com/api/v3/coins/markets?vs_currency=aud&order=market_cap_desc&per_page=100&page=1&sparkline=false')
     .then(res => {
       console.log(res.data);
       res.data.map((coin, i) => {
         if(coin['price_change_percentage_24h'] < 0){
-          coin["className"] = "Red";
+          coin["className"] = "red";
         }else{
-          coin["className"] = "Green";
+          coin["className"] = "green";
         }
       });
       console.log("after Class name added", res.data);
@@ -31,23 +38,26 @@ function Crypto() {
     }).catch(error => alert('There is an error'));
   }, []);
 
-  const handleChange = e => {
-    setSearch(e.target.value)
-  }
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+  };
 
-  const filteredCoins = coins.filter(coin =>
+  const filteredCoins = coins.filter((coin) =>
     coin.name.toLowerCase().includes(search.toLowerCase())
-  )
-
+  );
 
   return (
-    <div className='coin-app'>
+    <div className="coin-app">
       <div className="coin-search">
         <h1 className="coin-text">To the Moon 🚀</h1>
-          <form>
-            <input type="text" placeholder="Search"
-             className="coin-input" onChange={handleChange}/>
-          </form>
+        <form>
+          <input
+            type="text"
+            placeholder="Search"
+            className="coin-input"
+            onChange={handleChange}
+          />
+        </form>
       </div>
       <DynamicTable coins={filteredCoins} />
 

@@ -17,7 +17,7 @@ const Brisbane = () => {
         lang="en"
         locationLabel="Brisbane"
         unitsLabels={{ temperature: "°C", windSpeed: "Km/h" }}
-        showForecast={false}
+        showForecast
       />
     </div>
   );

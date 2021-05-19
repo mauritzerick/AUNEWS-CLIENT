@@ -17,7 +17,7 @@ const Sydney = () => {
         lang="en"
         locationLabel="Sydney"
         unitsLabels={{ temperature: "°C", windSpeed: "Km/h" }}
-        showForecast={false}
+        showForecast
       />
     </div>
   );

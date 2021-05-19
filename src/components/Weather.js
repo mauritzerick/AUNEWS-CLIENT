@@ -9,77 +9,71 @@ import Darwin from "./cityWeather/Darwin";
 import Perth from "./cityWeather/Perth";
 import Hobart from "./cityWeather/Hobart";
 import SearchCity from "./cityWeather/SearchCity";
-import Container from "react-bootstrap/Container";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
+import { makeStyles } from "@material-ui/core/styles";
+import Paper from "@material-ui/core/Paper";
+import Grid from "@material-ui/core/Grid";
 
 const baseUrl = "http://api.openweathermap.org/data/2.5/weather?";
 const apiKey = "d3e238ced3e15356c1c6acb557b2bc2f";
 
-//FIXME: search cityname/postcode at same time
-
-//serach by name
-const getWeatherDataCN = async (cityname) => {
-  try {
-    const { data } = await axios.get(
-      baseUrl + `q=${cityname}au&appid=${apiKey}`
-    );
-    return data;
-  } catch (error) {
-    throw error;
-  }
-};
-
-//search by postcode
-const getWeatherDataPC = async (postcode) => {
-  try {
-    const { data } = await axios.get(
-      baseUrl + `zip=${postcode},au&appid=${apiKey}`
-    );
-    return data;
-  } catch (error) {
-    throw error;
-  }
-};
-
 function Weather() {
   const [weatherdata, setWeatherData] = useState(null);
-  const [input, setCity] = useState("a");
+  const [input, setInput] = useState("a");
+  //
 
-  const getData = async () => {
-    try {
-       const data = await getWeatherDataCN(input + ",");
-      //const data = await getWeatherDataPC(parseInt(input));
-      console.log(data);
-      setWeatherData(data);
-    } catch (error) {
-      throw error;
-    }
+  //serach by name
+  const url1 = baseUrl + `q=${input},au&appid=${apiKey}`;
+
+  //search by postcode
+  const url2 = baseUrl + `zip=${input},au&appid=${apiKey}`;
+
+  // console.log(input);
+
+  let url = "";
+  if (parseInt(input) == input) {
+    url = url2;
+    console.log(typeof parseInt(input));
+  } else {
+    url = url1;
+    console.log(typeof parseInt(input));
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
   };
 
   useEffect(() => {
     getData();
   }, []);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const getData = () => {
+    axios
+      .get(url)
+      .then((response) => {
+        console.log(response);
+        const data = response.data;
+        setWeatherData(data);
+      })
+      .catch((error) => console.error(` Error:${error}`));
+
+    console.log(input);
+    console.log(weatherdata);
   };
 
-  console.log("input:", input);
   return (
     <div>
       <form onSubmit={handleSubmit}>
         <input
           type="search"
-          onChange={(e) => setCity(e.target.value)}
-          placeholder="Please enter the place"
+          onChange={(e) => setInput(e.target.value)}
+          placeholder="Please enter the place or local suburb"
           required
         />
         <button id="search" onClick={() => getData()}>
           Search
         </button>
       </form>
-      {weatherdata !== null && input !== null ? (
+      {weatherdata !== null ? (
         <div>
           <SearchCity
             name={weatherdata.name}
@@ -89,45 +83,40 @@ function Weather() {
         </div>
       ) : (
         <div>
-          <Container>
-            <Row>
-              <Col>
+          <table>
+            <tr>
+              <td>
                 <Sydney />
-              </Col>
-              <Col>
+              </td>
+              <td>
                 <Melbourne />
-              </Col>
-              <Col>
+              </td>
+              <td>
                 <Canberra />
-              </Col>
-              <Col>
+              </td>
+              <td>
                 <Adelaide />
-              </Col>
-            </Row>
-            <Row>
-              <Col>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                {" "}
                 <Brisbane />
-              </Col>
-              <Col>
+              </td>
+              <td>
+                {" "}
                 <Darwin />
-              </Col>
-              <Col>
+              </td>
+              <td>
+                {" "}
                 <Hobart />
-              </Col>
-              <Col>
+              </td>
+              <td>
+                {" "}
                 <Perth />
-              </Col>
-            </Row>
-          </Container>
-
-          {/* <Sydney />
-          <Melbourne />
-          <Canberra />
-          <Adelaide />
-          <Brisbane />
-          <Darwin />
-          <Hobart />
-          <Perth /> */}
+              </td>
+            </tr>
+          </table>
         </div>
       )}
     </div>
