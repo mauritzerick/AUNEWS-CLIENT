@@ -19,12 +19,9 @@ export const Container = styled.div`
     justify-content: center;
     max-width: 1000px;
     margin: 0 auto;
-    /* background: red; */
 `
 
 export const Column = styled.div`
-  /* flex-direction: row;
-  flex-wrap: wrap; */
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -48,10 +45,11 @@ export const FooterLink = styled.a`
   color: #fff;
   margin-bottom: 20px;
   font-size: 15px;
+  font-style: Italic;
   text-decoration: none;
 
   &:hover {
-      color: green;
+      color: gold;
       transition: 200ms ease-in;
   }
 `;
