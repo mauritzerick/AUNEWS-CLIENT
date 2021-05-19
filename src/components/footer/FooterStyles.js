@@ -6,7 +6,6 @@ export const Box = styled.div`
   position: relative;
   bottom: 0;
   width: 100%;
-  /* margin-top: 20px; */
 
   @media (max-width: 1000px) {
     padding: 70px 30px;
@@ -19,13 +18,14 @@ export const Container = styled.div`
     justify-content: center;
     max-width: 1000px;
     margin: 0 auto;
-`
+`;
 
 export const Column = styled.div`
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin-left: 60px;
+  margin-left: 40px;
+  border-right: 1px solid #333333;
 `;
 
 
@@ -59,4 +59,8 @@ export const Heading = styled.p`
   color: #fff;
   margin-bottom: 40px;
   font-weight: bold;
+  &:hover {
+      color: gold;
+      transition: 200ms ease-in;
+  }
 `;

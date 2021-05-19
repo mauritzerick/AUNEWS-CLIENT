@@ -1,0 +1,10 @@
+.crypto th , .crypto td{
+  padding: 5px;
+  color: white;
+  border: 1px solid white;
+}
+.crypto {
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 100%;
+}

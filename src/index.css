@@ -76,7 +76,7 @@ code {
   text-decoration: none;
 }
 
-.makeStyles-root-1,.makeStyles-root-6,.makeStyles-root-4,.makeStyles-root-9 {
+.makeStyles-root-1,.makeStyles-root-6,.makeStyles-root-4,.makeStyles-root-9,.makeStyles-root-10  {
   display: inline-block;
   margin: 5px;
   padding: 5px;
@@ -97,4 +97,21 @@ code {
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+#hoverEffect {
+  color: white;
+  font-weight: normal !important;
+}
+
+#bnpmNewsFooter {
+  margin: 0;
+}
+
+#sectionFooter {
+  margin-left: 80px;
+}
+
+#contactFooter {
+    border-right: 1px solid black !important;
 }
