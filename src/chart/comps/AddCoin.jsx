@@ -5,16 +5,16 @@ const AddCoin = () => {
   const [isActive, setIsActive] = useState(false);
   const { addCoin } = useContext(WatchListContext);
   const availableCoins = [
-    "Bitcoin",
-    "Ethereum",
-    "Ripple",
-    "Tether",
-    "Bitcoin-cash",
-    "Litecoin",
-    "Eos",
-    "Okb",
-    "Tezos",
-    "Cardano",
+    "bitcoin",
+    "ethereum",
+    "ripple",
+    "tether",
+    "bitcoin-cash",
+    "litecoin",
+    "eos",
+    "okb",
+    "tezos",
+    "cardano",
   ];
 
   const handleClick = (coin) => {
@@ -24,14 +24,14 @@ const AddCoin = () => {
 
   return (
     <div className="dropdown">
-      <button
+      {/* <button
         onClick={() => setIsActive(!isActive)}
         className="btn btn-primary dropdown-toggle"
         type="button"
       >
         Add Coin
-      </button>
-      <div className={isActive ? "dropdown-menu show" : "dropdown-menu"}>
+      </button> */}
+      {/* <div className={isActive ? "dropdown-menu show" : "dropdown-menu"}>
         {availableCoins.map((el) => {
           return (
             <a
@@ -43,7 +43,7 @@ const AddCoin = () => {
             </a>
           );
         })}
-      </div>
+      </div> */}
     </div>
   );
 };

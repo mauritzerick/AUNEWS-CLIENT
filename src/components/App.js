@@ -1,23 +1,23 @@
 import React from "react";
-import Homepage from "./Homepage.js";
+import Homepage from "./home/Homepage.js";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Navigation1 from "./Navigation1";
-import Navigation2 from "./Navigation2";
-import Weather from "./Weather";
-import Crypto from "./Crypto";
+import Navigation1 from "./nav/Navigation1";
+import Navigation2 from "./nav/Navigation2";
+import Weather from "./weather/Weather";
+import Crypto from "./crypto/Crypto";
 
-import "../chart/chart.css";
+
 // import Apps from "../chart/Apps"
 // import Header from "../chart/comps/Header"
 import CoinSummaryPage from "../chart/pages/CoinSummaryPage";
 import CoinDetailPage from "../chart/pages/CoinDetailPage";
 import { WatchListContextProvider } from "../chart/context/watchListContext";
-import Justin from "./Justin";
-import Search from "./Search";
-import Weathernav from "./Weathernav";
-import Footer from "./Footer";
-import News from "./News";
+import Justin from "./news/Justin";
+import Search from "./news/Search";
+import Weathernav from "./weather/Weathernav";
+import Footer from "./footer/Footer";
+import News from "./news/News";
 
 function App() {
   return (

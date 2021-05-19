@@ -2,9 +2,9 @@ import React from "react";
 // import { Link } from "react-router-dom";
 
 import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from '../images/favicon.ico';
+import logo from './images/favicon.ico';
 import './nav.css';
-import Weathernav from './Weathernav';
+import Weathernav from '../weather/Weathernav';
 
 const Navigation1 = () => {
   return (

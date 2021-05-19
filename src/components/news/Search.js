@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import NewsCard from './NewsCard';
 import SearchInput from './SearchInput';
-import Loading from './Loading';
+import Loading from '../Loading';
 
 class Search extends Component {
   constructor(){

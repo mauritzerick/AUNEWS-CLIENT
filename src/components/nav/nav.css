@@ -17,4 +17,16 @@
 }
 .navSearch, .navWeather {
   float:right;
+  height: 40px;
+}
+.secondNav {
+  background-color: #272828;
+
+  text-align: justify;
+  height: 50px;
+  margin-bottom: 10px;
+
+}
+.secondNav < Nav.Link {
+  padding: 5px;
 }

@@ -10,12 +10,13 @@
 .div2 {
   width: 23%;
   display: inline-block;
+  margin: 50px;
 }
 .div3 {
   width: 100%;
-  display: block;
+
 }
 .div4 {
   width: 100%;
-  display: block;
+
 }

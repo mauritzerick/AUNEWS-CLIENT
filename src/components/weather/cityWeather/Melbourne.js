@@ -1,10 +1,10 @@
 import ReactWeather, { useOpenWeather } from "react-open-weather";
 
-const Darwin = () => {
+const Melbourne = () => {
   const { data, isLoading, errorMessage } = useOpenWeather({
     key: "d3e238ced3e15356c1c6acb557b2bc2f",
-    lat: "-12.4611",
-    lon: "130.8418",
+    lat: "-37.814",
+    lon: "144.9633",
     lang: "en",
     unit: "metric", // values are (metric, standard, imperial)
   });
@@ -15,12 +15,12 @@ const Darwin = () => {
         errorMessage={errorMessage}
         data={data}
         lang="en"
-        locationLabel="Darwin"
+        locationLabel="Melbourne"
         unitsLabels={{ temperature: "°C", windSpeed: "Km/h" }}
-        showForecast={false}
+        showForecast
       />
     </div>
   );
 };
 
-export default Darwin;
+export default Melbourne;

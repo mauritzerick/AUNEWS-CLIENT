@@ -1,10 +1,10 @@
 import ReactWeather, { useOpenWeather } from "react-open-weather";
 
-const Brisbane = () => {
+const Hobart = () => {
   const { data, isLoading, errorMessage } = useOpenWeather({
     key: "d3e238ced3e15356c1c6acb557b2bc2f",
-    lat: "-31.9333",
-    lon: "115.8333",
+    lat: "-42.8794",
+    lon: "147.3294",
     lang: "en",
     unit: "metric", // values are (metric, standard, imperial)
   });
@@ -15,12 +15,12 @@ const Brisbane = () => {
         errorMessage={errorMessage}
         data={data}
         lang="en"
-        locationLabel="Brisbane"
+        locationLabel="Hobart"
         unitsLabels={{ temperature: "°C", windSpeed: "Km/h" }}
-        showForecast={false}
+        showForecast
       />
     </div>
   );
 };
 
-export default Brisbane;
+export default Hobart;
