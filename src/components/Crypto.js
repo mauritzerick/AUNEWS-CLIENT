@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-// import Coins from './Coins';
+import Coins from "./Coins";
 import DynamicTable from "./DynamicTable";
+
+import CoinSummaryPage from "../chart/pages/CoinSummaryPage";
+import CoinDetailPage from "../chart/pages/CoinDetailPage";
+import { WatchListContextProvider } from "../chart/context/watchListContext";
+
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function Crypto() {
   const [coins, setCoins] = useState([]);
