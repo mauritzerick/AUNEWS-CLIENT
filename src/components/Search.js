@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import NewsCard from './NewsCard';
 import SearchInput from './SearchInput';
+import Loading from './Loading';
 
 class Search extends Component {
   constructor(){
@@ -9,7 +10,8 @@ class Search extends Component {
     this.state = {
       query: "",
       searchResults: [],
-      error: ""
+      error: "",
+      isLoading: 0
     };
     this._handleChange = this._handleChange.bind(this);
     this._submitSearch = this._submitSearch.bind(this);
@@ -19,18 +21,18 @@ class Search extends Component {
     let search = process.env.REACT_APP_NEWS_EVERYTHING_URL + this.state.query + "&apiKey=" + process.env.REACT_APP_NEWS_API_KEY;
     event.preventDefault();
     if(this.state.query !== ""){
+      this.setState({searchResults:[], isLoading: 1});
       axios(search).then((response) => {
-        this.setState({searchResults: response.data.articles});
+        this.setState({searchResults: response.data.articles, isLoading: 0});
       }).catch((error) => {
         console.log(error);
-        this.setState({error: error});
+        this.setState({error: error, isLoading: 0});
       })
     }
   }
 
   _handleChange(event) {
     this.setState({ query: event.target.value })
-
   }
 
   render(){
@@ -41,7 +43,8 @@ class Search extends Component {
         <input type="search" onChange={ this._handleChange } placeholder="example: Corona"/>
         <button id="search"> Search </button>
       </form>
-      <SearchList newsList={this.state.searchResults}/>
+
+      <SearchList newsList={this.state.searchResults} show={this.state.isLoading}/>
       </div>
     )
   }
@@ -50,6 +53,7 @@ class Search extends Component {
 const SearchList = (props) => {
   return(
     <div className="mainBlock">
+    <Loading show={props.show}/>
     {
       props.newsList.map( (news) =>(
         <NewsCard className="newsCard" key={news.publishedAt}

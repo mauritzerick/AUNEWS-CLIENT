@@ -1,19 +1,14 @@
 .home {
-  background-color: white;
-  margin: 0 170px;
+  margin: 0 5px;
 }
 .homeDiv {
-  
   display: flex;
-  background-color: white;
 }
 .div1{
-  width: 60%;
-  display: inline-block;
-
+  width: 76%;
 }
 .div2 {
-  width: 38%;
+  width: 23%;
   display: inline-block;
 }
 .div3 {

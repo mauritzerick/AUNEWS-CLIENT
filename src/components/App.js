@@ -24,7 +24,6 @@ function App() {
     <div className="Home">
       <Router>
         <Navigation1 />
-
         <Navigation2 />
 
         <Switch>
@@ -35,6 +34,7 @@ function App() {
           <Route exact path="/news/:category" component={News} />
 
           <Route exact path="/search">
+
             <Search />
           </Route>
 
