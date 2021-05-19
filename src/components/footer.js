@@ -6,14 +6,14 @@ const Footer = () => {
     <Box>
       <Container>
         <Row>
-          <Column>
+          <Column id="bnpmNewsFooter">
             <Heading><img class="logo" src={ logo }/> BNPM NEWS</Heading>
             <FooterLink>
-            <span style={{ marginLeft: "10px" }}> BNPM News is a public news service in Australia produced by the News and Current Affairs division of the Australian Broadcasting Corporation. The division is responsible for all news-gathering and production of news output for BNPM television, radio and online services</span>
+            <h4 id="hoverEffect" style={{ marginLeft: "10px" }}> BNPM News is a public news service in Australia. The division is responsible for all news-gathering and production of news output for BNPM television, radio and online services</h4>
             </FooterLink>
           </Column>
 
-          <Column>
+          <Column id="sectionFooter">
             <Heading>Sections</Heading>
             <FooterLink href="/news/general">GENERAL</FooterLink>
             <FooterLink href="/news/business">BUSINESS</FooterLink>
@@ -62,9 +62,9 @@ const Footer = () => {
             </FooterLink>
           </Column>
 
-          <Column>
+          <Column id="contactFooter">
             <Heading>More From BNPM</Heading>
-              <FooterLink>Contact BNPM News: </FooterLink>
+              <FooterLink>Contact BNPM News:</FooterLink>
               <FooterLink href="#">Bhavya</FooterLink>
               <FooterLink href="#">Nelly</FooterLink>
               <FooterLink href="#">Priyanka</FooterLink>
