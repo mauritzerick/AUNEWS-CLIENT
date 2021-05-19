@@ -1,21 +1,22 @@
 import React, { useEffect, useState } from "react";
-import './Weathernav.css';
+import "./Weathernav.css";
 const baseUrl = "https://api.openweathermap.org/data/2.5";
 const apiKey = "d3e238ced3e15356c1c6acb557b2bc2f";
 
 function Weathernav() {
-  const [lat, setLat] = useState('');
-  const [long, setLong] = useState('');
+  const [lat, setLat] = useState("");
+  const [long, setLong] = useState("");
   const [weatherdata, setData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       console.log("lat and long values: ", lat, long);
-      if(lat.length != 0 && long.length != 0){
+      if (lat.length != 0 && long.length != 0) {
         await fetch(
           `${baseUrl}/weather/?lat=${lat}&lon=${long}&units=metric&APPID=${apiKey}`
-        ).then((res) => res.json())
-         .then((result) => {
+        )
+          .then((res) => res.json())
+          .then((result) => {
             setData(result);
             console.log(result);
           });
@@ -35,14 +36,18 @@ function Weathernav() {
       {typeof weatherdata.main != "undefined" ? (
         <div class="weatherData">
           <div class="weatherImage">
-            <img class="weatherImageIcon"
+            <img
+              class="weatherImageIcon"
               src={`http://openweathermap.org/img/w/${weatherdata.weather[0].icon}.png`}
               alt="imgicon"
             />
           </div>
           <div class="weatherSeperator">|</div>
           <div class="suburbData">
-            <p>{parseFloat(weatherdata.main.temp).toFixed(1)}&deg; <span class="weatherName">{weatherdata.weather[0].main}</span></p>
+            <p>
+              {parseFloat(weatherdata.main.temp).toFixed(1)}&deg;{" "}
+              <span class="weatherName">{weatherdata.weather[0].main}</span>
+            </p>
             <p>
               <i className="fa fa-street-view"></i>
               {weatherdata.name} | {weatherdata.sys.country}
@@ -50,14 +55,13 @@ function Weathernav() {
           </div>
         </div>
       ) : (
-        <div></div>
+        <div>Loading...</div>
       )}
     </div>
   );
 }
 
 export default Weathernav;
-
 
 // <div>
 //   <h4>Local Weather</h4>
