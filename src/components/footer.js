@@ -1,4 +1,5 @@
 import React from "react";
+import logo from '../images/favicon.ico';
 import { Box, Container, Row, Column, FooterLink, Heading,} from "./FooterStyles";
 const Footer = () => {
   return (
@@ -6,8 +7,12 @@ const Footer = () => {
       <Container>
         <Row>
           <Column>
-          
+            <Heading><img class="logo" src={ logo }/> BNPM NEWS</Heading>
+            <FooterLink>
+            <span style={{ marginLeft: "10px" }}> BNPM News is a public news service in Australia produced by the News and Current Affairs division of the Australian Broadcasting Corporation. The division is responsible for all news-gathering and production of news output for BNPM television, radio and online services</span>
+            </FooterLink>
           </Column>
+
           <Column>
             <Heading>Sections</Heading>
             <FooterLink href="/news/general">GENERAL</FooterLink>
@@ -59,9 +64,11 @@ const Footer = () => {
 
           <Column>
             <Heading>More From BNPM</Heading>
-            <FooterLink>
-            <span style={{ marginLeft: "10px" }}> BNPM News is a public news service in Australia produced by the News and Current Affairs division of the Australian Broadcasting Corporation. The division is responsible for all news-gathering and production of news output for BNPM television, radio and online services</span>
-            </FooterLink>
+              <FooterLink>Contact BNPM News: </FooterLink>
+              <FooterLink href="#">Bhavya</FooterLink>
+              <FooterLink href="#">Nelly</FooterLink>
+              <FooterLink href="#">Priyanka</FooterLink>
+              <FooterLink href="#">Mauritz</FooterLink>
           </Column>
         </Row>
       </Container>
