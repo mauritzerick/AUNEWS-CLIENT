@@ -51,13 +51,13 @@ const useStyles = makeStyles({
   },
   header1: {
     fontWeight: 900,
-    color: 'red',
+    color: '#480032',
   },
   green: {
     color: 'green',
   },
-  Red: {
-    color: 'Red',
+  red: {
+    color: 'red',
   },
 });
 

@@ -9,7 +9,7 @@ const Footer = () => {
           <Column>
             <Heading><img class="logo" src={ logo }/> BNPM NEWS</Heading>
             <FooterLink>
-            <span style={{ marginLeft: "10px" }}> BNPM News is a public news service in Australia produced by the News and Current Affairs division of the Australian Broadcasting Corporation. The division is responsible for all news-gathering and production of news output for BNPM television, radio and online services</span>
+            <h4 style={{ marginLeft: "10px" }}> BNPM News is a public news service in Australia produced by the News and Current Affairs division of the Australian Broadcasting Corporation. The division is responsible for all news-gathering and production of news output for BNPM television, radio and online services</h4>
             </FooterLink>
           </Column>
 
