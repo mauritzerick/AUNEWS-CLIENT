@@ -4,9 +4,9 @@ const baseUrl = "https://api.openweathermap.org/data/2.5";
 const apiKey = "d3e238ced3e15356c1c6acb557b2bc2f";
 
 function Weathernav() {
-  const [lat, setLat] = useState("");
-  const [long, setLong] = useState("");
-  const [weatherdata, setData] = useState([]);
+  const [lat, setLat] = useState('');
+  const [long, setLong] = useState('');
+  const [weatherdata, setWeatherData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -14,10 +14,9 @@ function Weathernav() {
       if (lat.length != 0 && long.length != 0) {
         await fetch(
           `${baseUrl}/weather/?lat=${lat}&lon=${long}&units=metric&APPID=${apiKey}`
-        )
-          .then((res) => res.json())
-          .then((result) => {
-            setData(result);
+        ).then((res) => res.json())
+         .then((result) => {
+            setWeatherData(result);
             console.log(result);
           });
       } else {

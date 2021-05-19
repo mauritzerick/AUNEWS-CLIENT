@@ -62,7 +62,7 @@ html {
 
 body {
   /* background-image: url(./texture.svg); */
-  background-color: var(--darkGrey);
+  background-color: rgb(70, 70, 80);
   min-height: calc(100vh - 100px);
   margin: 10px;
   background-attachment: fixed;
@@ -91,6 +91,7 @@ code {
     font-weight: 700;
     line-height: 1.0rem;
 }
+
 
 *,
 *:before,

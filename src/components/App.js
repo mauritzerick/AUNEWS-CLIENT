@@ -7,12 +7,14 @@ import Navigation2 from "./Navigation2";
 import Weather from "./Weather";
 import Crypto from "./Crypto";
 
-import "../chart/chart.css";
+
 // import Apps from "../chart/Apps"
 // import Header from "../chart/comps/Header"
 import CoinSummaryPage from "../chart/pages/CoinSummaryPage";
 import CoinDetailPage from "../chart/pages/CoinDetailPage";
 import { WatchListContextProvider } from "../chart/context/watchListContext";
+// import "../chart/chart.css";
+
 import Justin from "./Justin";
 import Search from "./Search";
 import Weathernav from "./Weathernav";
