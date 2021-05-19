@@ -1,6 +1,6 @@
 import React, { Component } from "react"; // destructuring
-import Crypto from "./Crypto";
-import News from "./News";
+import Crypto from "../crypto/Crypto";
+import News from "../news/News";
 import "./Homepage.css";
 
 class Homepage extends Component {
@@ -12,7 +12,7 @@ class Homepage extends Component {
               <News props ={"General"}/>
           </div>
           <div class="div2">
-            <div class="div3" ><Crypto/></div>
+            <div class="div3" ><Crypto home={true}/></div>
           </div>
         </div>
       </div>

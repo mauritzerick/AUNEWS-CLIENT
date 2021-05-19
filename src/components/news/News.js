@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import {useParams} from "react-router-dom" // destructuring
 import axios from 'axios';
 import NewsCard from './NewsCard';
-import altImage from '../images/GeneralAltImage.jpeg';
-import Loading from './Loading';
+import altImage from './images/GeneralAltImage.jpeg';
+import Loading from '../Loading';
 
 class News extends Component {
   constructor(props) {

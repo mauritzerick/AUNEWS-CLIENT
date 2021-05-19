@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 // import Coins from './Coins';
 import DynamicTable from "./DynamicTable";
+import CryptoMiniTable from "./CryptoMiniTable";
+import './Crypto.css';
 
-function Crypto() {
+function Crypto(props) {
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState("");
   useEffect(() => {
@@ -32,19 +34,28 @@ function Crypto() {
   );
 
   return (
-    <div className="coin-app">
-      <div className="coin-search">
-        <h1 className="coin-text">To the Moon 🚀</h1>
-        <form>
-          <input
-            type="text"
-            placeholder="Search"
-            className="coin-input"
-            onChange={handleChange}
-          />
-        </form>
-      </div>
-      <DynamicTable coins={filteredCoins} />
+    <div>
+    {
+      (!props.home ?
+        (<div className="coin-app">
+          <div className="coin-search">
+            <h1 className="coin-text"> Crypto currency</h1>
+            <form>
+              <input
+                type="text"
+                placeholder="Search"
+                className="coin-input"
+                onChange={handleChange}
+              />
+            </form>
+          </div>
+          <DynamicTable coins={filteredCoins} />
+        </div>) :
+        (<div>
+          <CryptoMiniTable coins={filteredCoins}/>
+        </div>
+      ))
+    }
     </div>
   );
 }

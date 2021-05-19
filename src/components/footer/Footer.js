@@ -1,5 +1,5 @@
 import React from "react";
-import logo from '../images/favicon.ico';
+import logo from './images/favicon.ico';
 import { Box, Container, Row, Column, FooterLink, Heading,} from "./FooterStyles";
 const Footer = () => {
   return (
@@ -9,7 +9,7 @@ const Footer = () => {
           <Column>
             <Heading><img class="logo" src={ logo }/> BNPM NEWS</Heading>
             <FooterLink>
-            <h4 style={{ marginLeft: "10px" }}> BNPM News is a public news service in Australia produced by the News and Current Affairs division of the Australian Broadcasting Corporation. The division is responsible for all news-gathering and production of news output for BNPM television, radio and online services</h4>
+            <h4 style={{ marginLeft: "10px" }}> BNPM News is a public news service in Australia produced by the News and Current Affairs division of AU News. The division is responsible for all news-gathering and production of news output for BNPM television, radio and online services</h4>
             </FooterLink>
           </Column>
 
