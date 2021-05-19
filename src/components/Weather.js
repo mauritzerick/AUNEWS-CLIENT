@@ -9,6 +9,7 @@ import Darwin from "./cityWeather/Darwin";
 import Perth from "./cityWeather/Perth";
 import Hobart from "./cityWeather/Hobart";
 import SearchCity from "./cityWeather/SearchCity";
+import "./Weather.css";
 
 const baseUrl = "http://api.openweathermap.org/data/2.5/weather?";
 const apiKey = "d3e238ced3e15356c1c6acb557b2bc2f";
@@ -79,11 +80,11 @@ function Weather() {
           />
         </div>
       ) : (
-        <div>
+        <div className="cityweather">
           <table>
             <tr>
               <td>
-                <Sydney />
+                <Darwin />
               </td>
               <td>
                 <Melbourne />
@@ -100,7 +101,7 @@ function Weather() {
                 <Brisbane />
               </td>
               <td>
-                <Darwin />
+                <Sydney />
               </td>
               <td>
                 <Hobart />
