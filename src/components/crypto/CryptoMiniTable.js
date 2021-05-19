@@ -37,7 +37,7 @@ const useStyles = makeStyles({
 
   },
   container: {
-    maxHeight: 350,
+    maxHeight: 370,
   },
   header: {
     fontWeight: 900,
@@ -53,7 +53,7 @@ const useStyles = makeStyles({
     color: 'red',
   },
   dataCell:{
-    fontSize: 10,
+    fontSize: 15,
     width: 30,
     height: 10,
     textAlign: 'center',
@@ -72,7 +72,7 @@ export default function DynamicTable(props) {
 
   const classes = useStyles();
   const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(12);
+  const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);

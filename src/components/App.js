@@ -7,7 +7,7 @@ import Navigation2 from "./nav/Navigation2";
 import Weather from "./weather/Weather";
 import Crypto from "./crypto/Crypto";
 
-import "../chart/chart.css";
+
 // import Apps from "../chart/Apps"
 // import Header from "../chart/comps/Header"
 import CoinSummaryPage from "../chart/pages/CoinSummaryPage";

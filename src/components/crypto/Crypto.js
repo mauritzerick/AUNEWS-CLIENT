@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-// import Coins from './Coins';
-import DynamicTable from "./DynamicTable";
+import React, {useState, useEffect} from 'react';
+import axios from 'axios'
+
+import DynamicTable from './DynamicTable';
 import CryptoMiniTable from "./CryptoMiniTable";
-import './Crypto.css';
+import CoinSummaryPage from "../../chart/pages/CoinSummaryPage";
+import CoinDetailPage from "../../chart/pages/CoinDetailPage";
+import { WatchListContextProvider } from "../../chart/context/watchListContext";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function Crypto(props) {
   const [coins, setCoins] = useState([]);
@@ -50,6 +53,14 @@ function Crypto(props) {
             </form>
           </div>
           <DynamicTable coins={filteredCoins} />
+            <Router>
+          <Switch>
+            <WatchListContextProvider>
+              <Route exact path="/crypto" component={CoinSummaryPage} />
+              <Route path="/coins/:id" component={CoinDetailPage} />
+            </WatchListContextProvider>
+          </Switch>
+        </Router>
         </div>) :
         (<div>
           <CryptoMiniTable coins={filteredCoins}/>
@@ -57,7 +68,12 @@ function Crypto(props) {
       ))
     }
     </div>
+
+
   );
+
+
 }
+
 
 export default Crypto;

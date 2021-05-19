@@ -13,7 +13,7 @@ const CoinList = () => {
       setIsLoading(true);
       const response = await coinGecko.get("/coins/markets/", {
         params: {
-          vs_currency: "usd",
+          vs_currency: "aud",
           ids: watchList.join(","),
         },
       });
@@ -30,6 +30,7 @@ const CoinList = () => {
     if (isLoading) {
       return <div>Loading...</div>;
     }
+
 
     return (
       <ul className="coinlist list-group mt-2">

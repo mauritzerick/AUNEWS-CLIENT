@@ -40,11 +40,10 @@ function Weathernav() {
               alt="imgicon"
             />
           </div>
-          <div class="weatherSeperator">|</div>
           <div class="suburbData">
-            <p>{parseFloat(weatherdata.main.temp).toFixed(1)}&deg; <span class="weatherName">{weatherdata.weather[0].main}</span></p>
-            <p>
-              <i className="fa fa-street-view"></i>
+            <p class="weatherName">{parseFloat(weatherdata.main.temp).toFixed(1)}&deg; <span class="weatherName">{weatherdata.weather[0].main}</span></p>
+            <p class="weatherName">
+
               {weatherdata.name} | {weatherdata.sys.country}
             </p>
           </div>

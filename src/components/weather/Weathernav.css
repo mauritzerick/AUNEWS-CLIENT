@@ -1,23 +1,24 @@
 .weatherData {
   display:flex;
   height: 40px;
+
 }
-.weatherImage, .weatherSeperator, .suburbData{
+.weatherImage,.suburbData{
   display: inline-block;
   height: 40px;
 }
-.weatherSeperator{
-  height: 50px;
-}
 .weatherImage{
   padding: 0;
+  border-right: 1px solid white;
+  margin-right: 10px;
 }
 .weatherImageIcon{
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   padding: 0;
 }
-.weatherName, .suburbData < p {
-  font-size: 5px;
+.weatherName {
+  font-size: 15px;
   padding: 0;
+  margin: 0;
 }
