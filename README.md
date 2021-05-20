@@ -14,11 +14,7 @@ Date: 20 May 2021
 
 Main goal: Building a functional news app with live server deployed in heroku in a team of four software engineers
 
-To test this project please run:
-
-```npm start```
-
-from command line
+To test this project please run ```npm start``` from command line:
 
 Main features:
 1. Implementation of users subscription with mailchimp
