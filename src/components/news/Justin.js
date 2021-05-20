@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
-import axios from 'axios'
-//import HTTP_call from 'https';
-import Mailchimp from 'react-mailchimp-form'
+import axios from 'axios';
+import Mailchimp from 'react-mailchimp-form';
 import NewsCard from './NewsCard';
-// import altImage from '../images/GeneralAltImage.jpeg'
-
 import { CloudinaryContext, Transformation, Image } from 'cloudinary-react';
-//const MAILCHIMP = "https://us1.api.mailchimp.com/3.0/lists/cf956b3a2d";
+import './News.css';
 const SERVER_NEWS_URL = 'http://localhost:3000/news.json';
 
 class Justin extends Component {
@@ -39,14 +36,16 @@ class Justin extends Component {
   render(){
     return(
       <div>
+      <h2>Would like to Subscribe to our news letter?</h2>
       <Mailchimp
       action='https://gmail.us1.list-manage.com/subscribe/post?u=a58ac3f80b52045bac544e375&amp;id=cf956b3a2d'
         fields={[
           {
             name: 'EMAIL',
-            placeholder: 'Email',
+            placeholder: 'Enter email here',
             type: 'email',
             required: true
+
           }
         ]}
         />

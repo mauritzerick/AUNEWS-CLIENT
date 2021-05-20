@@ -18,6 +18,7 @@ import Search from "./news/Search";
 import Weathernav from "./weather/Weathernav";
 import Footer from "./footer/Footer";
 import News from "./news/News";
+import About from "./about/About";
 
 function App() {
   return (
@@ -54,6 +55,9 @@ function App() {
             <Justin />
           </Route>
 
+          <Route exact path="/about">
+            <About />
+          </Route>
 
           <WatchListContextProvider>
             <Route exact path="/chart" component={CoinSummaryPage} />
