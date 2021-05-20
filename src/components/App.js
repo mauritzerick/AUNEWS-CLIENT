@@ -29,9 +29,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Homepage} />
 
-          <Route exact path="/news/entertainment">
-            <News props={"entertainment"}/>
-          </Route>
+          <Route exact path="/news/:category" component={News} />
 
           <Route exact path="/search" component={Search} />
 
@@ -43,7 +41,7 @@ function App() {
 
           <Route exact path="/justin" component={Justin} />
 
-          <Route exact path="/watchliv" component={Watchlive} />
+          <Route exact path="/watchlive" component={Watchlive} />
           <Watchlive />
 
           <WatchListContextProvider>

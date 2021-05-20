@@ -21,9 +21,9 @@ const Footer = () => {
               <h4 style={{ marginLeft: "10px" }}>
                 {" "}
                 BNPM News is a public news service in Australia produced by the
-                News and Current Affairs division of the AU News. The division is responsible for all news-gathering
-                and production of news output for BNPM television, radio and
-                online services
+                News and Current Affairs division of the AU News. The division
+                is responsible for all news-gathering and production of news
+                output for BNPM television, radio and online services
               </h4>
             </FooterLink>
           </Column>
@@ -38,11 +38,7 @@ const Footer = () => {
             <FooterLink href="/news/science" className="newsSection">
               SCIENCE
             </FooterLink>
-<<<<<<< HEAD
-            <FooterLink href="/crypto">CRYTPTO</FooterLink>
-=======
             <FooterLink href="/crypto">CRYPTO</FooterLink>
->>>>>>> f3dadbe4e7e925366592d9c67980d6c287267064
             <FooterLink href="/chart">CHART</FooterLink>
             <FooterLink href="/justin">JUSTIN</FooterLink>
           </Column>
