@@ -22,11 +22,11 @@ class News extends Component {
       if (this.props.props !== "General") {
         newsURL =
           newsURL +
-          `${this.props.match.params.category}&apikey=a598dbb0d4a24ccf8c3a54a403b3e1ce`;
+          `${this.props.match.params.category}&apikey=5d9e47c7febf45c8b087816526a26225`;
       } else {
         newsURL =
           newsURL +
-          `${this.props.props}&apikey=a598dbb0d4a24ccf8c3a54a403b3e1ce`;
+          `${this.props.props}&apikey=5d9e47c7febf45c8b087816526a26225`;
       }
 
       console.log(newsURL);
@@ -36,7 +36,7 @@ class News extends Component {
           this.setState({ newsArticle: newsArticles, isLoading: 0 });
         })
         .catch((error) => {
-          alert("There is an error");
+          alert(error);
           {
             this.state.isLoading = 0;
           }

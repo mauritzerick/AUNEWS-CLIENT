@@ -5,49 +5,18 @@ import "./nav.css";
 const Navigation2 = () => {
   return (
     <Nav class="secondNav">
-      <Link to="/news/general" className="inactive" activeclassname="active">
-        GENERAL
-      </Link>
-      |
-      <Link to="/news/business" className="inactive" activeclassname="active">
-        BUSINESS
-      </Link>
-      |
-      <Link
-        to="/news/entertainment"
-        className="inactive"
-        activeclassname="active"
-      >
-        ENTERTAINMENT
-      </Link>
-      |
-      <Link to="/news/sports" className="inactive" activeclassname="active">
-        SPORTS
-      </Link>
-      |
-      <Link to="/weather" className="inactive" activeclassname="active">
-        WEATHER
-      </Link>
-      |
-      <Link to="/news/science" className="inactive" activeclassname="active">
-        SCIENCE
-      </Link>
-      |
-      <Link to="/crypto" className="inactive" activeclassname="active">
-        Crypto
-      </Link>
-      |
-      <Link to="/chart" className="inactive" activeclassname="active">
-        Charts
-      </Link>
-      |
-      <Link to="/justin" className="inactive" activeclassname="active">
-        JUSTIN
-      </Link>
-      |
-      <Link to="/watchlive" className="inactive" activeclassname="active">
-        Live
-      </Link>
+
+      <Nav.Link href="/news/general" className="inactive secondNavLink" activeclassname="active">General</Nav.Link>|
+      <Nav.Link href="/news/business" className="inactive secondNavLink" activeclassname="active">Business</Nav.Link>|
+      <Nav.Link href="/news/entertainment" className="inactive secondNavLink" activeclassname="active">Entertainment</Nav.Link>|
+      <Nav.Link href="/news/sports" className="inactive secondNavLink" activeclassname="active">Sports</Nav.Link>|
+      <Nav.Link href="/weather" className="inactive secondNavLink" activeclassname="active">Weather</Nav.Link>|
+      <Nav.Link href="/news/science" className="inactive secondNavLink" activeclassname="active">Science</Nav.Link>|
+      <Nav.Link href="/crypto" className="inactive secondNavLink" activeclassname="active">Crypto</Nav.Link>|
+      <Nav.Link href="/justin" className="inactive secondNavLink" activeclassname="active">Justin</Nav.Link>|
+      <Nav.Link href="/about" className="inactive secondNavLink" activeclassname="active">About</Nav.Link>
+      <Nav.Link href="/watchliv" className="inactive secondNavLink" activeclassname="active">Live</Nav.Link>
+
     </Nav>
   );
 };

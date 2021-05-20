@@ -5,6 +5,7 @@ import SearchInput from "./SearchInput";
 import Loading from "../Loading";
 import "../weather/Weather.css";
 
+const SERVER_NEWS_URL = "https://gmail.us1.list-manage.com/subscribe/post?u=a58ac3f80b52045bac544e375&amp;id=cf956b3a2d"
 class Search extends Component {
   constructor() {
     super();
@@ -20,10 +21,10 @@ class Search extends Component {
 
   _submitSearch(event) {
     let search =
-      process.env.REACT_APP_NEWS_EVERYTHING_URL +
+      SERVER_NEWS_URL+
       this.state.query +
       "&apiKey=" +
-      process.env.REACT_APP_NEWS_API_KEY;
+      "5d9e47c7febf45c8b087816526a26225";
     event.preventDefault();
     if (this.state.query !== "") {
       this.setState({ searchResults: [], isLoading: 1 });

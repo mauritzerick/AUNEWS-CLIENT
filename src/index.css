@@ -62,7 +62,7 @@ html {
 
 body {
   /* background-image: url(./texture.svg); */
-  background-color:#eee;
+  background-color: darkGrey;
   min-height: calc(100vh - 100px);
   margin: 10px;
   background-attachment: fixed;

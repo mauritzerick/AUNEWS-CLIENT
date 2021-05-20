@@ -27,6 +27,7 @@
   margin-bottom: 10px;
 
 }
-.secondNav < Nav.Link {
-  padding: 5px;
+.secondNavLink {
+  padding: 12px;
+  font-size: 15px;
 }

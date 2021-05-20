@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+.mainAbout{
+  background-color: #292f36;
+}
+.header {
+  background-color: #a9a9a9;
+  width: 100%;
+  height: 350px;
+}
+.headerBack{
+  height:600px;
+}
+.groupPhoto {
+
+  width: 700px;
+  height: 500px;
+}
+.bnpmInfo {
+  margin: 50px 150px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-family: 'Pattaya', sans-serif;;
+  color: white;
+}
+.profile {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+.card {
+  disaply: flex;
+}
+.imageDiv {
+  display: inline-block;
+  width: 30%;
+}
+.infoDiv {
+  display: inline-block;
+  width: 65%;
+  text-align: left;
+  color: white;
+  font-family:'Pattaya', sans-serif;
+}
+.title{
+  font-family:'Pattaya', sans-serif;
+  font-size: 50px;
+}
