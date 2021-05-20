@@ -1,4 +1,4 @@
-![React + Ruby on Rails - BNPM News]([img]https://i.imgur.com/YjdrRGf.png[/img])
+![React + Ruby on Rails - BNPM News](https://i.imgur.com/YjdrRGf.png)
 
 
 # BNPM News
