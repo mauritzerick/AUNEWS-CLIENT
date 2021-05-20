@@ -1,7 +1,7 @@
 import React from "react";
 import Homepage from "./home/Homepage.js";
 
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import Navigation1 from "./nav/Navigation1";
 import Navigation2 from "./nav/Navigation2";
 import Weather from "./weather/Weather";
@@ -27,35 +27,22 @@ function App() {
         <Navigation2 />
 
         <Switch>
-          <Route exact path="/">
-            <Homepage />
-          </Route>
+          <Route exact path="/" component={Homepage} />
 
           <Route exact path="/news/:category" component={News} />
 
-          <Route exact path="/search">
-            <Search />
-          </Route>
+          <Route exact path="/search" component={Search} />
 
-          <Route exact path="/weather">
-            <Weather />
-          </Route>
+          <Route exact path="/weather" component={Weather} />
 
-          <Route exact path="/localweather">
-            <Weathernav />
-          </Route>
+          <Route exact path="/localweather" component={Weathernav} />
 
-          <Route exact path="/crypto">
-            <Crypto />
-          </Route>
+          <Route exact path="/crypto" component={Crypto} />
 
-          <Route exact path="/justin">
-            <Justin />
-          </Route>
+          <Route exact path="/justin" component={Justin} />
 
-          <Route exact path="/watchlive">
-            <Watchlive />
-          </Route>
+          <Route exact path="/watchliv" component={Watchlive} />
+          <Watchlive />
 
           <WatchListContextProvider>
             <Route exact path="/chart" component={CoinSummaryPage} />

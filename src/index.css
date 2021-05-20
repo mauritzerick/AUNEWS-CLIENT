@@ -98,3 +98,20 @@ code {
 *:after {
   box-sizing: inherit;
 }
+
+#hoverEffect {
+  color: white;
+  font-weight: normal !important;
+}
+
+#bnpmNewsFooter {
+  margin: 0;
+}
+
+#sectionFooter {
+  margin-left: 80px;
+}
+
+#contactFooter {
+    border-right: 1px solid black !important;
+}

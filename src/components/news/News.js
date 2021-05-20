@@ -17,20 +17,23 @@ class News extends Component {
   componentDidMount() {
     console.log(this.props);
     const newsInfo = () => {
-      let newsURL = "http://newsapi.org/v2/top-headlines?country=au&category="
+
+      let newsURL = "https://newsapi.org/v2/top-headlines?country=au&pageSize=100&category="
       if(this.props.props !== "General" ){
-        newsURL = newsURL + `${this.props.match.params.category}&apikey=d2136c3cf54d4638afa776dc6055a159`;
+        newsURL = newsURL + `${this.props.match.params.category}&apikey=a598dbb0d4a24ccf8c3a54a403b3e1ce`;
       }else{
-        newsURL = newsURL + `${this.props.props}&apikey=d2136c3cf54d4638afa776dc6055a159`;
+        newsURL = newsURL + `${this.props.props}&apikey=a598dbb0d4a24ccf8c3a54a403b3e1ce`;
       }
 
       console.log(newsURL);
       axios(newsURL).then((info) => {
         let newsArticles = info.data.articles;
         this.setState({newsArticle: newsArticles, isLoading: 0});
+
       }).catch(error => {
         alert('There is an error');
         {this.state.isLoading = 0}
+
       })
     }
     newsInfo()
