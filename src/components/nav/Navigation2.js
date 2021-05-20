@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import './nav.css';
+import "./nav.css";
 const Navigation2 = () => {
   return (
     <Nav class="secondNav">
@@ -15,6 +15,8 @@ const Navigation2 = () => {
       <Nav.Link href="/crypto" className="inactive secondNavLink" activeclassname="active">Crypto</Nav.Link>|
       <Nav.Link href="/justin" className="inactive secondNavLink" activeclassname="active">Justin</Nav.Link>|
       <Nav.Link href="/about" className="inactive secondNavLink" activeclassname="active">About</Nav.Link>
+      <Nav.Link href="/watchliv" className="inactive secondNavLink" activeclassname="active">Live</Nav.Link>
+
     </Nav>
   );
 };

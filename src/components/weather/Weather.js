@@ -9,14 +9,14 @@ import Darwin from "./cityWeather/Darwin";
 import Perth from "./cityWeather/Perth";
 import Hobart from "./cityWeather/Hobart";
 import SearchCity from "./cityWeather/SearchCity";
-import "./Weathernav.css";
+import "./Weather.css";
 
 const baseUrl = "http://api.openweathermap.org/data/2.5/weather?";
 const apiKey = "d3e238ced3e15356c1c6acb557b2bc2f";
 
 function Weather() {
   const [weatherdata, setWeatherData] = useState(null);
-  const [input, setInput] = useState("a");
+  const [input, setInput] = useState("");
   //
 
   //serach by name
@@ -30,10 +30,8 @@ function Weather() {
   let url = "";
   if (parseInt(input) == input) {
     url = url2;
-    console.log(typeof parseInt(input));
-  } else {
+  } else if (input !== "") {
     url = url1;
-    console.log(typeof parseInt(input));
   }
 
   const handleSubmit = (e) => {
@@ -44,35 +42,67 @@ function Weather() {
     getData();
   }, []);
 
+  // get data
   const getData = () => {
+    if (input == "") {
+      return (
+        <div className="cityweather">
+          <table>
+            <tr>
+              <td>
+                <Darwin />
+              </td>
+              <td>
+                <Melbourne />
+              </td>
+              <td>
+                <Canberra />
+              </td>
+              <td>
+                <Adelaide />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Brisbane />
+              </td>
+              <td>
+                <Sydney />
+              </td>
+              <td>
+                <Hobart />
+              </td>
+              <td>
+                <Perth />
+              </td>
+            </tr>
+          </table>
+        </div>
+      );
+    }
+
     axios
       .get(url)
       .then((response) => {
-        console.log(response);
         const data = response.data;
         setWeatherData(data);
       })
-      .catch((error) => console.error(` Error:${error}`));
-
-    console.log(input);
-    console.log(weatherdata);
+      .catch((error) => alert("Cannot find such place, please search again"));
   };
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="searchbox">
         <input
           type="search"
           onChange={(e) => setInput(e.target.value)}
-          placeholder="Please enter the place or local suburb"
+          placeholder="Please enter the local Suburb or Postcode"
           required
         />
-        <button id="search" onClick={() => getData()}>
-          Search
-        </button>
+        <button id="search" onClick={() => getData()}></button>
       </form>
       {weatherdata !== null ? (
-        <div>
+        <div className="searchcity">
           <SearchCity
             name={weatherdata.name}
             lon={weatherdata.coord.lon}

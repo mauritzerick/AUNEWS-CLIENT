@@ -7,13 +7,13 @@ import Navigation2 from "./nav/Navigation2";
 import Weather from "./weather/Weather";
 import Crypto from "./crypto/Crypto";
 
-
 // import Apps from "../chart/Apps"
 // import Header from "../chart/comps/Header"
 import CoinSummaryPage from "../chart/pages/CoinSummaryPage";
 import CoinDetailPage from "../chart/pages/CoinDetailPage";
 import { WatchListContextProvider } from "../chart/context/watchListContext";
 import Justin from "./news/Justin";
+import Watchlive from "./Watchlive";
 import Search from "./news/Search";
 import Weathernav from "./weather/Weathernav";
 import Footer from "./footer/Footer";
@@ -28,42 +28,43 @@ function App() {
         <Navigation2 />
 
         <Switch>
-          <Route exact path="/">
-            <Homepage />
+          <Route exact path="/" >
+            <Homepage/>
           </Route>
 
-          <Route exact path="/news/:category" component={News} />
+          <Route exact path="/news/:category" component={News}/>
 
-          <Route exact path="/search">
-
-            <Search />
+          <Route exact path="/search" >
+            <Search/>
           </Route>
 
-          <Route exact path="/weather">
-            <Weather />
+          <Route exact path="/weather" >
+            <Weather/>
           </Route>
-
           <Route exact path="/localweather">
             <Weathernav />
           </Route>
 
-          <Route exact path="/crypto">
+          <Route exact path="/crypto" >
             <Crypto />
           </Route>
-
-          <Route exact path="/justin">
-            <Justin />
-          </Route>
-
           <Route exact path="/about">
             <About />
           </Route>
+
+          <Route exact path="/justin">
+            <Justin/>
+          </Route>
+
+          <Route exact path="/watchliv" >
+            <Watchlive />
+          </Route>
+
 
           <WatchListContextProvider>
             <Route exact path="/chart" component={CoinSummaryPage} />
             <Route path="/coins/:id" component={CoinDetailPage} />
           </WatchListContextProvider>
-
         </Switch>
 
         <Footer />

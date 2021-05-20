@@ -38,7 +38,7 @@ const Footer = () => {
             <FooterLink href="/news/science" className="newsSection">
               SCIENCE
             </FooterLink>
-            <FooterLink href="/crypto">CRTPTO</FooterLink>
+            <FooterLink href="/crypto">CRYPTO</FooterLink>
             <FooterLink href="/chart">CHART</FooterLink>
             <FooterLink href="/justin">JUSTIN</FooterLink>
           </Column>

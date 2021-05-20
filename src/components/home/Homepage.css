@@ -4,19 +4,18 @@
 .homeDiv {
   display: flex;
 }
+
 .div1{
-  width: 76%;
+  width: 85%;
 }
 .div2 {
-  width: 23%;
+  width: 25%;
   display: inline-block;
-  margin: 50px;
+  margin: 50px 0px 0px 0px;
 }
 .div3 {
   width: 100%;
-
 }
 .div4 {
   width: 100%;
-
 }
