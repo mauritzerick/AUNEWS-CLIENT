@@ -18,8 +18,8 @@ from command line
 
 Main features:
 1. 
-2. Cryptocurrency latest price tacker with charts
-3. Weather update according to your location
+2. Cryptocurrency latest price tacker with live charts
+3. Weather update according to your location and all around Australia
 4. 
 
 
