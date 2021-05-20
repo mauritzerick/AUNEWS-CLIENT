@@ -1,7 +1,7 @@
 import React from "react";
 import Homepage from "./home/Homepage.js";
 
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navigation1 from "./nav/Navigation1";
 import Navigation2 from "./nav/Navigation2";
 import Weather from "./weather/Weather";
@@ -18,6 +18,7 @@ import Search from "./news/Search";
 import Weathernav from "./weather/Weathernav";
 import Footer from "./footer/Footer";
 import News from "./news/News";
+import About from "./about/About";
 
 function App() {
   return (
@@ -29,22 +30,35 @@ function App() {
         <Switch>
           <Route exact path="/" component={Homepage} />
 
-          <Route exact path="/news/entertainment">
-            <News props={"entertainment"}/>
+          <Route exact path="/news/:category" component= { News } />
+
+          <Route exact path="/news/:category" component={News} />
+
+          <Route exact path="/search">
+            <Search />
           </Route>
 
-          <Route exact path="/search" component={Search} />
+          <Route exact path="/weather">
+            <Weather />
+          </Route>
+          <Route exact path="/localweather">
+            <Weathernav />
+          </Route>
 
-          <Route exact path="/weather" component={Weather} />
+          <Route exact path="/crypto">
+            <Crypto />
+          </Route>
+          <Route exact path="/about">
+            <About />
+          </Route>
 
-          <Route exact path="/localweather" component={Weathernav} />
+          <Route exact path="/justin">
+            <Justin />
+          </Route>
 
-          <Route exact path="/crypto" component={Crypto} />
-
-          <Route exact path="/justin" component={Justin} />
-
-          <Route exact path="/watchliv" component={Watchlive} />
-          <Watchlive />
+          <Route exact path="/watchliv">
+            <Watchlive />
+          </Route>
 
           <WatchListContextProvider>
             <Route exact path="/chart" component={CoinSummaryPage} />
