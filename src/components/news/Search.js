@@ -58,7 +58,7 @@ class Search extends Component {
             onChange={this._handleChange}
             placeholder="example: Corona"
           />
-          <button id="search"></button>
+          <button id="search" className="serachbutton"></button>
         </form>
 
         <SearchList

@@ -3,39 +3,49 @@
 import React, { useEffect, useState } from "react";
 import Loading from "../Loading";
 import SearchCity from "../weather/cityWeather/SearchCity";
+import Sydney from "../weather/cityWeather/Sydney";
 
 const baseUrl = "https://api.openweathermap.org/data/2.5";
 const apiKey = "d3e238ced3e15356c1c6acb557b2bc2f";
 
 function LocalW() {
   const [lat, setLat] = useState("");
-  const [lon, setLon] = useState("");
-  const [weatherdata, setData] = useState([]);
+  const [long, setLon] = useState("");
+  const [weatherdata, setWeatherData] = useState([]);
   let isLoading = true;
+
   useEffect(() => {
     const fetchData = async () => {
-      console.log("lat and long values: ", lat, lon);
-      if (lat.length != 0 && lon.length != 0) {
+      console.log("lat and long values: ", lat, long);
+      if (lat.length != 0 && long.length != 0) {
         await fetch(
-          `${baseUrl}/weather/?lat=${lat}&lon=${lon}&units=metric&APPID=${apiKey}`
+          `${baseUrl}/weather/?lat=${lat}&lon=${long}&units=metric&APPID=${apiKey}`
         )
           .then((res) => res.json())
           .then((result) => {
-            setData(result);
+            setWeatherData(result);
             isLoading = false;
             console.log(result);
           });
       } else {
-        navigator.geolocation.getCurrentPosition(function (position) {
-          console.log("Position data:", position);
-          setLat(position.coords.latitude);
-          setLon(position.coords.longitude);
-        });
+        navigator.geolocation.getCurrentPosition(
+          function (position) {
+            console.log("Position data:", position);
+            setLat(position.coords.latitude);
+            setLon(position.coords.longitude);
+          },
+          function (error) {
+            if (error.code == error.PERMISSION_DENIED) {
+              setLat("-33.8679");
+              setLon("151.2093");
+              fetchData();
+            }
+          }
+        );
       }
     };
     fetchData();
-  }, [lat, lon]);
-  console.log(weatherdata);
+  }, [lat, long]);
 
   return (
     <div>
