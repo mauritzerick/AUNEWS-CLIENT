@@ -99,7 +99,11 @@ function Weather() {
           placeholder="Please enter the local Suburb or Postcode"
           required
         />
-        <button id="search" onClick={() => getData()}></button>
+        <button
+          id="search"
+          className="serachbutton"
+          onClick={() => getData()}
+        ></button>
       </form>
       {weatherdata !== null ? (
         <div className="searchcity">

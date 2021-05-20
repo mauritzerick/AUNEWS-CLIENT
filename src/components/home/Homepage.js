@@ -2,7 +2,7 @@ import React, { Component } from "react"; // destructuring
 import Crypto from "../crypto/Crypto";
 import News from "../news/News";
 import "./Homepage.css";
-import LocalW from "../cityWeather/LocalW";
+import LocalW from "../weather/LocalW";
 
 class Homepage extends Component {
   render() {
