@@ -1,7 +1,6 @@
-![React + Ruby on Rails - BNPM News](https://i.imgur.com/YjdrRGf.png)
-
-
 # BNPM News
+
+![React + Ruby on Rails - BNPM News](https://i.imgur.com/YjdrRGf.png)
 
 A news reader app made with React JS and Ruby on Rails
 
