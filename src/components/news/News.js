@@ -18,9 +18,9 @@ class News extends Component {
     console.log(this.props);
     const newsInfo = () => {
 
-      let newsURL = "http://newsapi.org/v2/top-headlines?country=au&pageSize=100&category="
+      let newsURL = "https://newsapi.org/v2/top-headlines?country=au&pageSize=100&category="
       if(this.props.props !== "General" ){
-        newsURL = newsURL + `${this.props.match.params.category}&apikey=a598dbb0d4a24ccf8c3a54a403b3e1ce`;
+        newsURL = newsURL + `${this.props.props}&apikey=a598dbb0d4a24ccf8c3a54a403b3e1ce`;
       }else{
         newsURL = newsURL + `${this.props.props}&apikey=a598dbb0d4a24ccf8c3a54a403b3e1ce`;
       }

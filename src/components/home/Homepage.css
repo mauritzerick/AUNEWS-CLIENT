@@ -4,9 +4,14 @@
 .homeDiv {
   display: flex;
 }
+<<<<<<< HEAD
 .div1{
   width: 85%;
 
+=======
+.div1 {
+  width: 76%;
+>>>>>>> f3dadbe4e7e925366592d9c67980d6c287267064
 }
 .div2 {
   width: 25%;
@@ -15,9 +20,7 @@
 }
 .div3 {
   width: 100%;
-
 }
 .div4 {
   width: 100%;
-
 }

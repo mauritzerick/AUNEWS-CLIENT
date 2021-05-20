@@ -1,20 +1,53 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import './nav.css';
+import "./nav.css";
 const Navigation2 = () => {
   return (
     <Nav class="secondNav">
-
-      <Nav.Link href="/news/general" className="inactive" activeclassname="active">GENERAL</Nav.Link>|
-      <Nav.Link href="/news/business" className="inactive" activeclassname="active">BUSINESS</Nav.Link>|
-      <Nav.Link href="/news/entertainment" className="inactive" activeclassname="active">ENTERTAINMENT</Nav.Link>|
-      <Nav.Link href="/news/sports" className="inactive" activeclassname="active">SPORTS</Nav.Link>|
-      <Nav.Link href="/weather" className="inactive" activeclassname="active">WEATHER</Nav.Link>|
-      <Nav.Link href="/news/science" className="inactive" activeclassname="active">SCIENCE</Nav.Link>|
-      <Nav.Link href="/crypto" className="inactive" activeclassname="active">Crypto</Nav.Link>|
-      <Nav.Link href="/chart" className="inactive" activeclassname="active">Charts</Nav.Link>|
-      <Nav.Link href="/justin" className="inactive" activeclassname="active">JUSTIN</Nav.Link>
+      <Link to="/news/general" className="inactive" activeclassname="active">
+        GENERAL
+      </Link>
+      |
+      <Link to="/news/business" className="inactive" activeclassname="active">
+        BUSINESS
+      </Link>
+      |
+      <Link
+        to="/news/entertainment"
+        className="inactive"
+        activeclassname="active"
+      >
+        ENTERTAINMENT
+      </Link>
+      |
+      <Link to="/news/sports" className="inactive" activeclassname="active">
+        SPORTS
+      </Link>
+      |
+      <Link to="/weather" className="inactive" activeclassname="active">
+        WEATHER
+      </Link>
+      |
+      <Link to="/news/science" className="inactive" activeclassname="active">
+        SCIENCE
+      </Link>
+      |
+      <Link to="/crypto" className="inactive" activeclassname="active">
+        Crypto
+      </Link>
+      |
+      <Link to="/chart" className="inactive" activeclassname="active">
+        Charts
+      </Link>
+      |
+      <Link to="/justin" className="inactive" activeclassname="active">
+        JUSTIN
+      </Link>
+      |
+      <Link to="/watchlive" className="inactive" activeclassname="active">
+        Live
+      </Link>
     </Nav>
   );
 };

@@ -54,14 +54,14 @@ function Crypto(props) {
             </form>
           </div>
           <DynamicTable coins={filteredCoins} />
-            <Router>
-          <Switch>
+          {/* <Router>
+          <Switch> */}
             <WatchListContextProvider>
               <Route exact path="/crypto" component={CoinSummaryPage} />
               <Route path="/coins/:id" component={CoinDetailPage} />
             </WatchListContextProvider>
-          </Switch>
-        </Router>
+          {/* </Switch>
+        </Router> */}
         </div>) :
         (<div>
           <h1> Crypto Currency </h1>
