@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/AUNEWS-CLIENT/static/css/main.e0f865a9.chunk.css",
-    "main.js": "/AUNEWS-CLIENT/static/js/main.87057bc8.chunk.js",
-    "main.js.map": "/AUNEWS-CLIENT/static/js/main.87057bc8.chunk.js.map",
+    "main.js": "/AUNEWS-CLIENT/static/js/main.a456d2a5.chunk.js",
+    "main.js.map": "/AUNEWS-CLIENT/static/js/main.a456d2a5.chunk.js.map",
     "runtime-main.js": "/AUNEWS-CLIENT/static/js/runtime-main.9ed23b14.js",
     "runtime-main.js.map": "/AUNEWS-CLIENT/static/js/runtime-main.9ed23b14.js.map",
     "static/js/2.c60f3f7f.chunk.js": "/AUNEWS-CLIENT/static/js/2.c60f3f7f.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.9ed23b14.js",
     "static/js/2.c60f3f7f.chunk.js",
     "static/css/main.e0f865a9.chunk.css",
-    "static/js/main.87057bc8.chunk.js"
+    "static/js/main.a456d2a5.chunk.js"
   ]
 }
