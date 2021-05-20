@@ -1,7 +1,7 @@
 import React from "react";
 import Homepage from "./home/Homepage.js";
 
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import Navigation1 from "./nav/Navigation1";
 import Navigation2 from "./nav/Navigation2";
 import Weather from "./weather/Weather";
