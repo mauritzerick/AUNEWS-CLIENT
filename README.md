@@ -1,14 +1,20 @@
 # BNPM News
 
-A news reader app made with React and Ruby on Rails
+A news reader app made with React JS and Ruby on Rails
 
-Access site: CLICK HERE
+Access site: [CLICKHERE](https://mauritzerick.github.io/AUNEWS-CLIENT) 
 
-General Assembly Project 2 - Ruby on Rails
+General Assembly Project 2 - React + Ruby on Rails
 
 Date: 20 May 2021
 
 Main goal: Building a functional news website in a team of four software engineers
+
+To test this project please run:
+
+npm start
+
+from command line
 
 Main features:
 1. 
@@ -27,4 +33,11 @@ List of implemented gems:
 2.
 3.
 
-What I would do in future version:
+What we would do in future version:
+1.
+2.
+3.
+4.
+5.
+6.
+
