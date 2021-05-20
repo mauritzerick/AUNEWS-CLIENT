@@ -37,13 +37,10 @@ const Footer = () => {
             <FooterLink href="/news/entertainment">ENTERTAINMENT</FooterLink>
             <FooterLink href="/news/science" className="newsSection">
               SCIENCE
-<<<<<<< HEAD
-            </FooterLink
->            <FooterLink href="/crypto">CRYTPTO</FooterLink>
-=======
+
             </FooterLink>
-            <FooterLink href="/crypto">CRYPTO</FooterLink>
->>>>>>> 99b37c1a4a0c443d90f938e2c5b4df20dc6afd7a
+           <FooterLink href="/crypto">CRYPTO</FooterLink>
+
             <FooterLink href="/chart">CHART</FooterLink>
             <FooterLink href="/justin">JUSTIN</FooterLink>
           </Column>
