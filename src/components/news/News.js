@@ -20,9 +20,9 @@ class News extends Component {
 
       let newsURL = "https://newsapi.org/v2/top-headlines?country=au&pageSize=100&category="
       if(this.props.props !== "General" ){
-        newsURL = newsURL + `${this.props.props}&apikey=a598dbb0d4a24ccf8c3a54a403b3e1ce`;
+        newsURL = newsURL + `${this.props.match.params.category}&apikey=5d9e47c7febf45c8b087816526a26225`;
       }else{
-        newsURL = newsURL + `${this.props.props}&apikey=a598dbb0d4a24ccf8c3a54a403b3e1ce`;
+        newsURL = newsURL + `${this.props.props}&apikey=5d9e47c7febf45c8b087816526a26225`;
       }
 
       console.log(newsURL);

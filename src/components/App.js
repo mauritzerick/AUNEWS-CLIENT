@@ -29,9 +29,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Homepage} />
 
-          <Route exact path="/news/entertainment">
-            <News props={"entertainment"}/>
-          </Route>
+          <Route exact path="/news/:category" component= { News } />
 
           <Route exact path="/search" component={Search} />
 
