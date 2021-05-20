@@ -4,7 +4,7 @@ A news reader app made with React JS and Ruby on Rails
 
 Access site: [CLICKHERE](https://mauritzerick.github.io/AUNEWS-CLIENT) 
 
-General Assembly Project 2 - React + Ruby on Rails
+General Assembly Project 2 - React JS + Ruby on Rails
 
 Date: 20 May 2021
 
@@ -18,8 +18,9 @@ from command line
 
 Main features:
 1. 
-2. 
-3. 
+2. Cryptocurrency latest price tacker with charts
+3. Weather update according to your location
+4. 
 
 
 Tools:
@@ -34,7 +35,7 @@ List of implemented gems:
 3.
 
 What we would do in future version:
-1.
+1. Create our own api from scratch
 2.
 3.
 4.
