@@ -57,18 +57,8 @@ export default function NewsCard(props) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-<<<<<<< HEAD
         <Link href={props.link} target="_blank" rel="noopener">
           Read More..
-=======
-        <Link
-          className="readmore"
-          href={props.link}
-          target="_blank"
-          rel="noopener"
-        >
-          Read More
->>>>>>> 5c223374150d386ab6e55b715866b6363b89117c
         </Link>
       </CardActions>
     </Card>
