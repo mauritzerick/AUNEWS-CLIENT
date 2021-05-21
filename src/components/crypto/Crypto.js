@@ -66,7 +66,7 @@ function Crypto(props) {
         </div>
       ) : (
         <div>
-          <h1> Crypto Currency 💰</h1>
+          <h1> Cryptocurrency 💰</h1>
           <CryptoMiniTable coins={filteredCoins} />
         </div>
       )}
