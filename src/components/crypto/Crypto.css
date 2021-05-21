@@ -1,4 +1,11 @@
-.crypto th , .crypto td{
+@import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap");
+.title {
+  font-family: "Pattaya", sans-serif;
+  font-size: 50px;
+}
+
+.crypto th,
+.crypto td {
   padding: 5px;
   color: white;
   border: 1px solid white;

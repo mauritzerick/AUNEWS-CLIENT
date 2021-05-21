@@ -44,7 +44,7 @@ function Crypto(props) {
       {!props.home ? (
         <div className="coin-app">
           <div className="coin-search">
-            <h1 className="coin-text"> Crypto currency</h1>
+            <h1 className="title"> Crypto Currency</h1>
             <form>
               <input
                 type="text"
