@@ -5,7 +5,7 @@
 ![React + Ruby on Rails - BNPM News](https://i.imgur.com/YjdrRGf.png)
 
 Access site: [Front-end](https://mauritzerick.github.io/AUNEWS-CLIENT) 
-[Live server](https://bnpm-news.herokuapp.com/news)
+Access site: [Live server](https://bnpm-news.herokuapp.com/news)
 
 ## General Assembly Project 2 - React JS + Ruby on Rails
 
