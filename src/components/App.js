@@ -28,24 +28,24 @@ function App() {
         <Navigation2 />
 
         <Switch>
-          <Route exact path="/" >
-            <Homepage/>
+          <Route exact path="/" component={Homepage} />
+
+          <Route exact path="/news/:category" component= { News } />
+
+          <Route exact path="/news/:category" component={News} />
+
+          <Route exact path="/search">
+            <Search />
           </Route>
 
-          <Route exact path="/news/:category" component={News}/>
-
-          <Route exact path="/search" >
-            <Search/>
-          </Route>
-
-          <Route exact path="/weather" >
-            <Weather/>
+          <Route exact path="/weather">
+            <Weather />
           </Route>
           <Route exact path="/localweather">
             <Weathernav />
           </Route>
 
-          <Route exact path="/crypto" >
+          <Route exact path="/crypto">
             <Crypto />
           </Route>
           <Route exact path="/about">
@@ -53,13 +53,12 @@ function App() {
           </Route>
 
           <Route exact path="/justin">
-            <Justin/>
+            <Justin />
           </Route>
 
-          <Route exact path="/watchliv" >
+          <Route exact path="/watchliv">
             <Watchlive />
           </Route>
-
 
           <WatchListContextProvider>
             <Route exact path="/chart" component={CoinSummaryPage} />

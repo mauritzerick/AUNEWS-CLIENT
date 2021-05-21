@@ -24,7 +24,7 @@ class Search extends Component {
   }
   fetchURL() {
     let search =
-      SERVER_NEWS_URL+
+      SERVER_NEWS_URL +
       this.state.query +
       "&apiKey=" +
       "5d9e47c7febf45c8b087816526a26225";
@@ -66,6 +66,7 @@ class Search extends Component {
             type="search"
             onChange={this._handleChange}
             placeholder="example: Corona"
+            className="searchinput"
           />
           <button id="search"></button>
         </form>

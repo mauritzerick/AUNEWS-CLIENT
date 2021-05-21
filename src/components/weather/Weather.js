@@ -97,6 +97,7 @@ function Weather() {
           type="search"
           onChange={(e) => setInput(e.target.value)}
           placeholder="Please enter the local Suburb or Postcode"
+          className="searchinput"
           required
         />
         <button

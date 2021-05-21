@@ -1,32 +1,34 @@
-import React, {useState, useEffect} from 'react';
-import axios from 'axios'
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
-import DynamicTable from './DynamicTable';
+import DynamicTable from "./DynamicTable";
 import CryptoMiniTable from "./CryptoMiniTable";
 import CoinSummaryPage from "../../chart/pages/CoinSummaryPage";
 import CoinDetailPage from "../../chart/pages/CoinDetailPage";
 import { WatchListContextProvider } from "../../chart/context/watchListContext";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
+import MonetizationOnIcon from "@material-ui/icons/MonetizationOn";
 
 function Crypto(props) {
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState("");
   useEffect(() => {
-    axios('https://api.coingecko.com/api/v3/coins/markets?vs_currency=aud&order=market_cap_desc&per_page=100&page=1&sparkline=false')
-    .then(res => {
-      console.log(res.data);
-      res.data.map((coin, i) => {
-        if(coin['price_change_percentage_24h'] < 0){
-          coin["className"] = "red";
-        }else{
-          coin["className"] = "green";
-        }
-      });
-      console.log("after Class name added", res.data);
-      setCoins(res.data);
-
-    }).catch(error => alert('There is an error'));
+    axios(
+      "https://api.coingecko.com/api/v3/coins/markets?vs_currency=aud&order=market_cap_desc&per_page=100&page=1&sparkline=false"
+    )
+      .then((res) => {
+        console.log(res.data);
+        res.data.map((coin, i) => {
+          if (coin["price_change_percentage_24h"] < 0) {
+            coin["className"] = "red";
+          } else {
+            coin["className"] = "green";
+          }
+        });
+        console.log("after Class name added", res.data);
+        setCoins(res.data);
+      })
+      .catch((error) => alert("There is an error"));
   }, []);
 
   const handleChange = (e) => {
@@ -39,15 +41,14 @@ function Crypto(props) {
 
   return (
     <div>
-    {
-      (!props.home ?
-        (<div className="coin-app">
+      {!props.home ? (
+        <div className="coin-app">
           <div className="coin-search">
-            <h1 className="coin-text"> Crypto currency</h1>
+            <h1 className="title"> Crypto Currency</h1>
             <form>
               <input
                 type="text"
-                placeholder="Search"
+                placeholder="Search by Crypto Name"
                 className="coin-input"
                 onChange={handleChange}
               />
@@ -56,26 +57,21 @@ function Crypto(props) {
           <DynamicTable coins={filteredCoins} />
           {/* <Router>
           <Switch> */}
-            <WatchListContextProvider>
-              <Route exact path="/crypto" component={CoinSummaryPage} />
-              <Route path="/coins/:id" component={CoinDetailPage} />
-            </WatchListContextProvider>
+          <WatchListContextProvider>
+            <Route exact path="/crypto" component={CoinSummaryPage} />
+            <Route path="/coins/:id" component={CoinDetailPage} />
+          </WatchListContextProvider>
           {/* </Switch>
         </Router> */}
-        </div>) :
-        (<div>
-          <h1> Crypto Currency </h1>
-          <CryptoMiniTable coins={filteredCoins}/>
         </div>
-      ))
-    }
+      ) : (
+        <div>
+          <h1> Crypto Currency💰</h1>
+          <CryptoMiniTable coins={filteredCoins} />
+        </div>
+      )}
     </div>
-
-
   );
-
-
 }
-
 
 export default Crypto;

@@ -2,8 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Loading from "../Loading";
-import SearchCity from "../weather/cityWeather/SearchCity";
-import Sydney from "../weather/cityWeather/Sydney";
+import SearchCity from "./cityWeather/SearchCity";
 
 const baseUrl = "https://api.openweathermap.org/data/2.5";
 const apiKey = "d3e238ced3e15356c1c6acb557b2bc2f";
