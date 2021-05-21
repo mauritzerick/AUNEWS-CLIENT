@@ -7,7 +7,7 @@ import NewsCard from "./NewsCard";
 
 import { CloudinaryContext, Transformation, Image } from "cloudinary-react";
 //const MAILCHIMP = "https://us1.api.mailchimp.com/3.0/lists/cf956b3a2d";
-const SERVER_NEWS_URL = "http://localhost:3000/news.json";
+const SERVER_NEWS_URL = "https://bnpm-news.herokuapp.com/news.json";
 
 class Justin extends Component {
   constructor() {
