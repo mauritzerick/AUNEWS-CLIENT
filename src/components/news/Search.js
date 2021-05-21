@@ -5,7 +5,7 @@ import SearchInput from "./SearchInput";
 import Loading from "../Loading";
 import "../weather/Weather.css";
 
-const SERVER_NEWS_URL = "https://newsapi.org/v2/everything?q="
+const SERVER_NEWS_URL = "https://newsapi.org/v2/everything?q=";
 class Search extends Component {
   constructor() {
     super();
@@ -68,7 +68,7 @@ class Search extends Component {
             placeholder="example: Corona"
             className="searchinput"
           />
-          <button id="search"></button>
+          <button id="search" className="searchbutton"></button>
         </form>
 
         <SearchList

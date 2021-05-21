@@ -102,7 +102,7 @@ function Weather() {
         />
         <button
           id="search"
-          className="serachbutton"
+          className="searchbutton"
           onClick={() => getData()}
         ></button>
       </form>
