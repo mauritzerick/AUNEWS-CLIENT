@@ -41,7 +41,7 @@ export default function NewsCard(props) {
         {
           props.children
         }
-        
+
         <CardContent>
           <Typography gutterBottom variant="h5" component="h5" className={classes.fontStyle}>
             {props.title}
@@ -53,7 +53,7 @@ export default function NewsCard(props) {
       </CardActionArea>
       <CardActions>
         <Link href={props.link} target="_blank" rel="noopener">
-          Read More
+          Read More..
         </Link>
       </CardActions>
     </Card>

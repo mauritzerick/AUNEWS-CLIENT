@@ -5,27 +5,30 @@ import SearchInput from "./SearchInput";
 import Loading from "../Loading";
 import "../weather/Weather.css";
 
-const SERVER_NEWS_URL = "https://gmail.us1.list-manage.com/subscribe/post?u=a58ac3f80b52045bac544e375&amp;id=cf956b3a2d"
+const SERVER_NEWS_URL = "https://newsapi.org/v2/everything?q="
 class Search extends Component {
   constructor() {
     super();
     this.state = {
-      query: "",
+      query: "Top News",
       searchResults: [],
       error: "",
       isLoading: 0,
     };
     this._handleChange = this._handleChange.bind(this);
     this._submitSearch = this._submitSearch.bind(this);
+    this.fetchURL = this.fetchURL.bind(this);
   }
-
-  _submitSearch(event) {
+  componentDidMount() {
+    this.fetchURL();
+  }
+  fetchURL() {
     let search =
       SERVER_NEWS_URL+
       this.state.query +
       "&apiKey=" +
       "5d9e47c7febf45c8b087816526a26225";
-    event.preventDefault();
+
     if (this.state.query !== "") {
       this.setState({ searchResults: [], isLoading: 1 });
       axios(search)
@@ -40,6 +43,11 @@ class Search extends Component {
           this.setState({ error: error, isLoading: 0 });
         });
     }
+  }
+
+  _submitSearch(event) {
+    event.preventDefault();
+    this.fetchURL();
   }
 
   _handleChange(event) {
@@ -59,7 +67,7 @@ class Search extends Component {
             onChange={this._handleChange}
             placeholder="example: Corona"
           />
-          <button id="search" className="serachbutton"></button>
+          <button id="search"></button>
         </form>
 
         <SearchList
