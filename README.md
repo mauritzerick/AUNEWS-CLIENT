@@ -26,6 +26,7 @@ To test this project please run ```npm start``` from command line:
 2. Ruby on Rails
 3. Heroku
 4. Chart JS 
+5. Cloudinary
 
 ### List of implemented APIs:
 1. coingecko
