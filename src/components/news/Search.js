@@ -27,7 +27,7 @@ class Search extends Component {
       SERVER_NEWS_URL +
       this.state.query +
       "&apiKey=" +
-      "5d9e47c7febf45c8b087816526a26225";
+      "d2136c3cf54d4638afa776dc6055a159";
 
     if (this.state.query !== "") {
       this.setState({ searchResults: [], isLoading: 1 });
@@ -68,7 +68,7 @@ class Search extends Component {
             placeholder="example: Corona"
             className="searchinput"
           />
-          <button id="search"></button>
+        <button id="search"></button>
         </form>
 
         <SearchList
