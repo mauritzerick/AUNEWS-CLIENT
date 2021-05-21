@@ -5,7 +5,8 @@ import SearchInput from "./SearchInput";
 import Loading from "../Loading";
 import "../weather/Weather.css";
 
-const SERVER_NEWS_URL = "https://gmail.us1.list-manage.com/subscribe/post?u=a58ac3f80b52045bac544e375&amp;id=cf956b3a2d"
+const SERVER_NEWS_URL =
+  "https://gmail.us1.list-manage.com/subscribe/post?u=a58ac3f80b52045bac544e375&amp;id=cf956b3a2d";
 class Search extends Component {
   constructor() {
     super();
@@ -21,7 +22,7 @@ class Search extends Component {
 
   _submitSearch(event) {
     let search =
-      SERVER_NEWS_URL+
+      SERVER_NEWS_URL +
       this.state.query +
       "&apiKey=" +
       "5d9e47c7febf45c8b087816526a26225";
@@ -58,6 +59,7 @@ class Search extends Component {
             type="search"
             onChange={this._handleChange}
             placeholder="example: Corona"
+            className="searchinput"
           />
           <button id="search" className="serachbutton"></button>
         </form>
