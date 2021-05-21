@@ -2,7 +2,7 @@
 
 ## A news reader app made with React JS and Ruby on Rails
 
-![React + Ruby on Rails - BNPM News](https://i.imgur.com/YjdrRGf.png)
+![React + Ruby on Rails - BNPM News](https://i.imgur.com/Nu7kgAZ.png)
 
 #### Access site: [Front-end](https://mauritzerick.github.io/AUNEWS-CLIENT) 
 #### Access site: [Live server](https://bnpm-news.herokuapp.com/news)
