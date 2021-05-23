@@ -4,7 +4,6 @@ import axios from "axios";
 import Mailchimp from "react-mailchimp-form";
 import NewsCard from "./NewsCard";
 // import altImage from '../images/GeneralAltImage.jpeg'
-import "./Justin.css";
 
 import { CloudinaryContext, Transformation, Image } from "cloudinary-react";
 //const MAILCHIMP = "https://us1.api.mailchimp.com/3.0/lists/cf956b3a2d";
@@ -33,7 +32,6 @@ class Justin extends Component {
         this.setState({
           news: news.data,
         });
-        setTimeout(fetchNewsInfo, 1000);
       });
     };
     fetchNewsInfo();
@@ -42,22 +40,21 @@ class Justin extends Component {
   render() {
     return (
       <div>
-        <h2>Would like to Subscribe to our news letter?</h2>
-        <div className="mailChimp">
-          <Mailchimp
-            action="https://gmail.us1.list-manage.com/subscribe/post?u=a58ac3f80b52045bac544e375&amp;id=cf956b3a2d"
-            fields={[
-              {
-                name: "EMAIL",
-                placeholder: "Enter email here",
-                type: "email",
-                required: true,
-              },
-            ]}
-          />
-        </div>
+      <h2>Would like to Subscribe to our news letter?</h2>
+      <NewsJustIn news={this.state.news} />
+      <Mailchimp
+      action='https://gmail.us1.list-manage.com/subscribe/post?u=a58ac3f80b52045bac544e375&amp;id=cf956b3a2d'
+        fields={[
+          {
+            name: 'EMAIL',
+            placeholder: 'Enter email here',
+            type: 'email',
+            required: true
 
-        <NewsJustIn news={this.state.news} />
+          }
+        ]}
+        />
+
       </div>
     );
   }

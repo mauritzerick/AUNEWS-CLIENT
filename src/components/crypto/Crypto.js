@@ -8,6 +8,7 @@ import CoinDetailPage from "../../chart/pages/CoinDetailPage";
 import { WatchListContextProvider } from "../../chart/context/watchListContext";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import MonetizationOnIcon from "@material-ui/icons/MonetizationOn";
+import './Crypto.css';
 
 function Crypto(props) {
   const [coins, setCoins] = useState([]);
