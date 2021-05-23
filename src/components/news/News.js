@@ -18,11 +18,11 @@ class News extends Component {
     console.log(this.props);
     const newsInfo = () => {
 
-      let newsURL = "https://newsapi.org/v2/top-headlines?country=au&pageSize=100&category="
+      let newsURL = "https://gnews.io/api/v4/top-headlines?token=a87068074606da8c51bf48026e8325b0&country=au&topic="
       if(this.props.props !== "General" ){
-        newsURL = newsURL + `${this.props.match.params.category}&apikey=d2136c3cf54d4638afa776dc6055a159`;
+        newsURL = newsURL + `${this.props.match.params.category}`;
       }else{
-        newsURL = newsURL + `${this.props.props}&apikey=d2136c3cf54d4638afa776dc6055a159`;
+        newsURL = newsURL + `${this.props.props}`;
       }
 
       console.log(newsURL);
@@ -50,7 +50,7 @@ class News extends Component {
             className="newsCard"
             key={article.publishedAt}
             title={article.title}
-            image={article.urlToImage === null ? altImage : article.urlToImage}
+            image={article.image === null ? altImage : article.image}
             description={article.description}
             link={article.url}
           ></NewsCard>

@@ -3,7 +3,8 @@ import axios from "axios";
 //import HTTP_call from 'https';
 import Mailchimp from "react-mailchimp-form";
 import NewsCard from "./NewsCard";
-// import altImage from '../images/GeneralAltImage.jpeg'
+// import altImage from '../images/GeneralAltImage.jpeg';
+import Loading from "../Loading";
 
 import { CloudinaryContext, Transformation, Image } from "cloudinary-react";
 //const MAILCHIMP = "https://us1.api.mailchimp.com/3.0/lists/cf956b3a2d";
@@ -23,6 +24,7 @@ class Justin extends Component {
           video: "",
         },
       ],
+      isLoading: 1,
     };
   }
 
@@ -30,7 +32,7 @@ class Justin extends Component {
     const fetchNewsInfo = () => {
       axios.get(SERVER_NEWS_URL).then((news) => {
         this.setState({
-          news: news.data,
+          news: news.data, isLoading: 0
         });
       });
     };
@@ -40,20 +42,25 @@ class Justin extends Component {
   render() {
     return (
       <div>
-      <h2>Would like to Subscribe to our news letter?</h2>
-      <NewsJustIn news={this.state.news} />
-      <Mailchimp
-      action='https://gmail.us1.list-manage.com/subscribe/post?u=a58ac3f80b52045bac544e375&amp;id=cf956b3a2d'
-        fields={[
-          {
-            name: 'EMAIL',
-            placeholder: 'Enter email here',
-            type: 'email',
-            required: true
 
-          }
-        ]}
-        />
+      <div class="mailChimp">
+        <h2>Would like to Subscribe to our news letter?</h2>
+        <Mailchimp
+        action='https://gmail.us1.list-manage.com/subscribe/post?u=a58ac3f80b52045bac544e375&amp;id=cf956b3a2d'
+          fields={[
+            {
+              name: 'EMAIL',
+              placeholder: 'Enter email here',
+              type: 'email',
+              required: true
+
+            }
+          ]}
+          />
+      </div>
+
+      <Loading show={this.state.isLoading} />
+      <NewsJustIn news={this.state.news} />
 
       </div>
     );
