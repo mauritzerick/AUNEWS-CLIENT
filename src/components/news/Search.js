@@ -65,7 +65,7 @@ class Search extends Component {
           <input
             type="search"
             onChange={this._handleChange}
-            placeholder="example: Corona"
+            placeholder="Example: Corona"
             className="searchinput"
           />
           <button id="search" className="searchbutton"></button>

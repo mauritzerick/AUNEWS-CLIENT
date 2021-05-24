@@ -48,23 +48,23 @@ const About = () => {
     <div class="headerBack">
 
       <div class="header">
-        <h1 class="title" >About</h1>
+        <h1 class="title" >About Us</h1>
         <img class="groupPhoto" src={groupPhoto} alt="Group photo"/>
       </div>
     </div>
       <div class="bnpmInfo">
-      <h3>BNPM news is an Australia based NEWS broadcast website which will provide new information about different categories like General, Sports, Business, etc. BNPM News also allows the user to opt for email subscription for monthly news letters. Along with NEWS, this website provides information about weather and crypto currency.
+      <h3>BNPM news is an Australia based NEWS broadcast website provides different categories of NEWS information like General, Sports, Business, etc. BNPM News also allows the user to opt-in for email subscription for monthly NEWS letters. Along with NEWS, this website provides information about weather and crypto currency.
       </h3>
       <h3>
-      BNPM News is integrated with different open source APIs to retrieve the NEWS, weather and crypto currency details. For crypto currency lovers, this website will be handy as it has features like live rates, graphs.
+      BNPM News is integrated with different open source APIs to retrieve the NEWS, weather and crypto currency details. For crypto currency lovers, this website will be handy as it has features like live rates, and graphs.
       </h3>
       <h3>
-      For more information about website and technical details, please reach out to founders as mentioned below.
+      For more information about the website and technical details, please reach out to founders as mentioned below.
       </h3>
       </div>
       <hr/>
       <div>
-        <h1> Our board of directors </h1>
+        <h1 class="heading">Board of Directors </h1>
         {
           info.map((person) =>
             <Card name={person.name}
