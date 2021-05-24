@@ -16,12 +16,12 @@ class Justin extends Component {
     this.state = {
       news: [
         {
-          title: "",
-          subtitle: "",
-          description: "",
-          image: "",
-          link: "",
-          video: "",
+          title: null,
+          subtitle: null,
+          description: null,
+          image: null,
+          link: null,
+          video: null,
         },
       ],
       isLoading: 1,
@@ -60,16 +60,44 @@ class Justin extends Component {
       </div>
 
       <Loading show={this.state.isLoading} />
-      <NewsJustIn news={this.state.news} />
-
+      <ShowNews news={this.state.news} />
       </div>
     );
   }
 }
 
+function ShowNews(props) {
+  const news = props.news;
+  if (news.length > 1) {
+    return <NewsJustIn news={news} />;
+  }
+  return <div> Please wait its loading</div>
+}
 const NewsJustIn = (props) => {
   return (
     <div className="mainBlock">
+
+      {props.news.map((n) => (
+        <NewsCard
+          className="newsCard"
+          key={n.id}
+          title={n.title}
+          description={n.description}
+          link={n.link}
+        >
+          <CloudinaryContext cloudName="didtkbpn7">
+            <Image publicId={n.image}>
+              <Transformation
+                crop="scale"
+                width="300"
+                height="200"
+                dpr="auto"
+                responsive_placeholder="blank"
+              />
+            </Image>
+          </CloudinaryContext>
+        </NewsCard>
+      ))}
       {props.news.map((n) => (
         <NewsCard
           className="newsCard"

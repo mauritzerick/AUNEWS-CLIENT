@@ -1,3 +1,4 @@
+import './About.css';
 const card = (props) => {
   return(
     <div class="card">
@@ -10,7 +11,7 @@ const card = (props) => {
         <br/>
         Designation: <span class="name"> { props.designation } </span>
         <br/>
-        Linkedin: <span class="name"><a href={ props.linkedin}> {props.linkedin} </a></span>
+        Linkedin: <span class="name"><a class="link" href={ props.linkedin}> {props.linkedin} </a></span>
       </div>
       <hr/>
     </div>

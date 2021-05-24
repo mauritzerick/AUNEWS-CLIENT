@@ -55,6 +55,16 @@ class News extends Component {
             link={article.url}
           ></NewsCard>
         ))}
+        {this.state.newsArticle.map((article, index) => (
+          <NewsCard
+            className="newsCard"
+            key={article.publishedAt}
+            title={article.title}
+            image={article.image === null ? altImage : article.image}
+            description={article.description}
+            link={article.url}
+          ></NewsCard>
+        ))}
       </div>
     );
   }
