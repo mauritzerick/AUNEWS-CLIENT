@@ -9,7 +9,13 @@ export const WatchListContextProvider = (props) => {
       "bitcoin",
       "ethereum",
       "ripple",
+      "tether",
+      "bitcoin-cash",
       "litecoin",
+      "eos",
+      "okb",
+      "tezos",
+      "cardano"
     ]
   );
 
@@ -32,8 +38,12 @@ export const WatchListContextProvider = (props) => {
   };
 
   return (
-    <WatchListContext.Provider value={{ watchList, deleteCoin, addCoin }}>
-      {props.children}
-    </WatchListContext.Provider>
+    <div>
+      <h3>Charts for crypto currency</h3>
+      <WatchListContext.Provider value={{ watchList, deleteCoin, addCoin }}>
+        {props.children}
+      </WatchListContext.Provider>
+    </div>
+
   );
 };

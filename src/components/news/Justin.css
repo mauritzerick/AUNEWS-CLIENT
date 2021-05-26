@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Pattaya&display=swap");
+
+div.mailChimp button {
+  width: 100px;
+  height: 45px;
+  margin-left: 5px;
+  background-color: #292f36;
+  color: white;
+  border-radius: 6px;
+}
+.title {
+  font-family: "Pattaya", sans-serif;
+  font-size: 20px;
+}

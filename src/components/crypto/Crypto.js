@@ -48,7 +48,7 @@ function Crypto(props) {
             <form>
               <input
                 type="text"
-                placeholder="Search"
+                placeholder="Search by Crypto Name"
                 className="coin-input"
                 onChange={handleChange}
               />

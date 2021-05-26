@@ -1,10 +1,11 @@
 import React, { Component } from "react"; // destructuring
+import "./news/Justin.css";
 
 class Watchlive extends Component {
   render() {
     return (
       <div>
-        <h1>News Channel</h1>
+        <h1 className="title">News Channel</h1>
         <div style={{ margin: "20px" }}>
           <iframe
             width="560"

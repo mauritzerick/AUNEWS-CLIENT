@@ -37,4 +37,6 @@ To test this project please run ```npm start``` from command line:
 1. Functional sign-in feature in front-end
 2. Create our own api from scratch
 3. Detect incoming users' geolocation
-4. Change the news according to users' preferred languages
+4. Change the news according to users' preferred languages.
+
+
