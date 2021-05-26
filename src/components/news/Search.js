@@ -5,7 +5,7 @@ import SearchInput from "./SearchInput";
 import Loading from "../Loading";
 import "../weather/Weather.css";
 
-const SERVER_NEWS_URL = "https://newsapi.org/v2/everything?q=";
+const SERVER_NEWS_URL = "https://gnews.io/api/v4/search?q=";
 class Search extends Component {
   constructor() {
     super();
@@ -26,8 +26,8 @@ class Search extends Component {
     let search =
       SERVER_NEWS_URL +
       this.state.query +
-      "&apiKey=" +
-      "5d9e47c7febf45c8b087816526a26225";
+      "&token=" +
+      "a87068074606da8c51bf48026e8325b0";
 
     if (this.state.query !== "") {
       this.setState({ searchResults: [], isLoading: 1 });
@@ -65,7 +65,7 @@ class Search extends Component {
           <input
             type="search"
             onChange={this._handleChange}
-            placeholder="example: Corona"
+            placeholder="Example: Corona"
             className="searchinput"
           />
           <button id="search" className="searchbutton"></button>
@@ -89,7 +89,7 @@ const SearchList = (props) => {
           className="newsCard"
           key={news.publishedAt}
           title={news.title}
-          image={news.urlToImage}
+          image={news.image}
           description={news.description}
           link={news.url}
         />

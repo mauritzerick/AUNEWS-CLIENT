@@ -13,7 +13,7 @@ const About = () => {
       name: "Bhavya",
       designation: "Founder",
       image: bhavya,
-      linkedin: "www.linkedin.com/in/bhavyagovind",
+      linkedin: "https://www.linkedin.com/in/bhavyagovind",
       about:
       "I first started working as an iOS developer in 2014 and am currently upskilling through the software engineering immersive course at General Assembly. My skills/Interests include but are not limited to: HTML, CSS, Javascript, Ruby on Rails, PostgreSQL,React JS, Swift, and Objective C.My goal is to find work in a challenging environment where I can use my skills and knowledge to cater to businesses and their requirements. If you’re interested in my profile, please get in touch!"
     },
@@ -48,20 +48,23 @@ const About = () => {
     <div class="headerBack">
 
       <div class="header">
-        <h1 class="title" >About</h1>
+        <h1 class="title" >About Us</h1>
         <img class="groupPhoto" src={groupPhoto} alt="Group photo"/>
       </div>
     </div>
       <div class="bnpmInfo">
-      <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      <h3>BNPM news is an Australia based NEWS broadcast website provides different categories of NEWS information like General, Sports, Business, etc. BNPM News also allows the user to opt-in for email subscription for monthly NEWS letters. Along with NEWS, this website provides information about weather and crypto currency.
       </h3>
       <h3>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      BNPM News is integrated with different open source APIs to retrieve the NEWS, weather and crypto currency details. For crypto currency lovers, this website will be handy as it has features like live rates, and graphs.
+      </h3>
+      <h3>
+      For more information about the website and technical details, please reach out to founders as mentioned below.
       </h3>
       </div>
       <hr/>
       <div>
-        <h1> Our board of directors </h1>
+        <h1 class="heading">Board of Directors </h1>
         {
           info.map((person) =>
             <Card name={person.name}

@@ -1,5 +1,5 @@
 import React from "react";
-import logo from '../images/favicon.ico';
+import logo from './images/favicon.ico';
 import { Box, Container, Row, Column, FooterLink, Heading,} from "./FooterStyles";
 const Footer = () => {
   return (
